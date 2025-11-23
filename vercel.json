@@ -2,8 +2,152 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.js"
+      "source": "/panier",
+      "destination": "/panier.html"
+    },
+    {
+      "source": "/commande/livraison",
+      "destination": "/livraison.html"
+    },
+    {
+      "source": "/checkout/livraison",
+      "destination": "/livraison.html"
+    },
+    {
+      "source": "/commande/paiement",
+      "destination": "/paiement.html"
+    },
+    {
+      "source": "/commande/confirmation",
+      "destination": "/confirmation.html"
+    },
+    {
+      "source": "/engagements",
+      "destination": "/engagements.html"
+    },
+    {
+      "source": "/nos-engagements",
+      "destination": "/engagements.html"
+    },
+    {
+      "source": "/producteurs",
+      "destination": "/producteurs.html"
+    },
+    {
+      "source": "/producteurs/ferme-des-tilleuls",
+      "destination": "/producteur-ferme-tilleuls.html"
+    },
+    {
+      "source": "/aide",
+      "destination": "/aide.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/aide.html"
+    },
+    {
+      "source": "/a-propos",
+      "destination": "/a-propos.html"
+    },
+    {
+      "source": "/rejoindre-nos-producteurs",
+      "destination": "/rejoindre.html"
+    },
+    {
+      "source": "/rejoindre",
+      "destination": "/rejoindre.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/suivi-de-commande",
+      "destination": "/suivi.html"
+    },
+    {
+      "source": "/suivi",
+      "destination": "/suivi.html"
+    },
+    {
+      "source": "/mentions-legales",
+      "destination": "/mentions-legales.html"
+    },
+    {
+      "source": "/conditions-generales-de-vente",
+      "destination": "/cgv.html"
+    },
+    {
+      "source": "/cgv",
+      "destination": "/cgv.html"
+    },
+    {
+      "source": "/politique-de-confidentialite",
+      "destination": "/confidentialite.html"
+    },
+    {
+      "source": "/confidentialite",
+      "destination": "/confidentialite.html"
+    },
+    {
+      "source": "/accessibilite",
+      "destination": "/accessibilite.html"
+    },
+    {
+      "source": "/recherche",
+      "destination": "/recherche.html"
+    },
+    {
+      "source": "/mon-compte",
+      "destination": "/mon-compte.html"
+    },
+    {
+      "source": "/compte/tableau-de-bord",
+      "destination": "/mon-compte.html"
+    },
+    {
+      "source": "/compte",
+      "destination": "/compte.html"
+    },
+    {
+      "source": "/produits",
+      "destination": "/produits.html"
+    },
+    {
+      "source": "/produit/fromages",
+      "destination": "/produit-fromages.html"
+    },
+    {
+      "source": "/produit/confitures",
+      "destination": "/produit-confitures.html"
+    },
+    {
+      "source": "/produit/jus-pomme",
+      "destination": "/produit-jus-pomme.html"
+    },
+    {
+      "source": "/produit/panier-famille",
+      "destination": "/produit-panier-famille.html"
+    },
+    {
+      "source": "/produit/herbes-aromatiques",
+      "destination": "/produit-herbes-aromatiques.html"
+    },
+    {
+      "source": "/produit/soupe-legumes",
+      "destination": "/produit-soupe-legumes.html"
+    },
+    {
+      "source": "/produit/oignons-echalotes",
+      "destination": "/produit-oignons-echalotes.html"
+    },
+    {
+      "source": "/produit/panier-legumes",
+      "destination": "/produit.html"
+    },
+    {
+      "source": "/produit/:path*",
+      "destination": "/produit.html"
     }
   ]
 }
