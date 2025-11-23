@@ -148,6 +148,8 @@
       "source": "/produit/:path*",
       "destination": "/produit.html"
     }
-  ]
+  ],
+  "buildCommand": "",
+  "outputDirectory": "."
 }
 
