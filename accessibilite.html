@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibilité du site – GreenCart</title>
+    <meta name="description" content="Déclaration d'accessibilité de GreenCart : état de conformité RGAA, améliorations en cours et voies de recours.">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="canonical" href="https://greencart.fr/accessibilite/" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/compte" aria-label="Mon compte" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    <a href="/panier" aria-label="Panier" class="icon-link cart-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" aria-live="polite">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <h1>Déclaration d'accessibilité</h1>
+
+            <section class="legal-section">
+                <h2>Engagement d'accessibilité</h2>
+                <p>GreenCart s'engage à rendre son site internet accessible, conformément à l'article 47 de la loi n°2005-102 du 11 février 2005 et au référentiel général d'amélioration de l'accessibilité (RGAA).</p>
+                <p>Cette déclaration d'accessibilité s'applique au site <strong>greencart.fr</strong>.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>État de conformité</h2>
+                <p>Le site greencart.fr est <strong>partiellement conforme</strong> au RGAA 4.1, en raison des non-conformités listées ci-dessous.</p>
+                <p>Un audit d'accessibilité a été réalisé en janvier 2025. Les résultats montrent que le site respecte la majorité des critères du RGAA 4.1, avec des axes d'amélioration identifiés.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>Résultats des tests</h2>
+                <p><strong>Date de l'audit :</strong> Janvier 2025</p>
+                <p><strong>Type d'audit :</strong> Audit manuel et automatisé sur un échantillon de pages représentatives</p>
+                <p><strong>Pages testées :</strong> Page d'accueil, page produits, page panier, page commande, page aide</p>
+                <p><strong>Pourcentage de critères respectés :</strong> Environ 75% des critères RGAA 4.1</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>Contenus non accessibles</h2>
+                <p>Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes :</p>
+                <ul>
+                    <li><strong>Contrastes de couleurs :</strong> Certains textes sur fond coloré ne respectent pas toujours le ratio de contraste 4,5:1 minimum (amélioration en cours)</li>
+                    <li><strong>Alternatives textuelles :</strong> Quelques images décoratives manquent d'attributs alt vides (correction prévue)</li>
+                    <li><strong>Formulaires :</strong> Certains champs de formulaire pourraient bénéficier d'associations label/champ plus explicites (amélioration prévue)</li>
+                    <li><strong>Navigation clavier :</strong> Quelques éléments interactifs nécessitent une amélioration de l'indicateur de focus (amélioration prévue)</li>
+                    <li><strong>Contenus tiers :</strong> Certains contenus intégrés (cartes, widgets) peuvent présenter des limitations d'accessibilité liées à leur origine externe</li>
+                </ul>
+            </section>
+
+            <section class="legal-section">
+                <h2>Améliorations en cours</h2>
+                <p>GreenCart met en œuvre un plan d'amélioration continue de l'accessibilité, portant notamment sur :</p>
+                <ul>
+                    <li>Renforcement des contrastes de couleurs sur l'ensemble du site</li>
+                    <li>Amélioration des alternatives textuelles pour toutes les images</li>
+                    <li>Optimisation de la navigation au clavier et des indicateurs de focus</li>
+                    <li>Amélioration de la structure des formulaires et des messages d'erreur</li>
+                    <li>Renforcement de la cohérence de la structure de titres (Hn)</li>
+                    <li>Tests réguliers avec des outils d'accessibilité et des utilisateurs en situation de handicap</li>
+                </ul>
+                <p><strong>Calendrier prévisionnel :</strong> Les améliorations majeures sont prévues pour le premier semestre 2025.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>Voies de recours & contact</h2>
+                <p>Si vous constatez un défaut d'accessibilité vous empêchant d'accéder à un contenu ou une fonctionnalité du site, vous pouvez :</p>
+                <ul>
+                    <li>Nous contacter par e-mail : <a href="mailto:accessibilite@greencart.fr">accessibilite@greencart.fr</a></li>
+                    <li>Utiliser notre <a href="/contact">formulaire de contact</a> en précisant "Accessibilité" dans le sujet</li>
+                </ul>
+                <p>Nous nous engageons à vous répondre dans un délai de 7 jours ouvrés et à vous proposer une solution alternative d'accès au contenu ou au service concerné.</p>
+                
+                <h3>Procédure de recours</h3>
+                <p>Si vous estimez que nous n'avons pas répondu à votre demande ou que la réponse n'est pas satisfaisante, vous avez la possibilité de :</p>
+                <ul>
+                    <li>Contacter le <a href="https://www.defenseurdesdroits.fr" target="_blank" rel="noopener noreferrer">Défenseur des droits</a></li>
+                    <li>Introduire une réclamation auprès de la <a href="https://www.defenseurdesdroits.fr/saisir/delegues" target="_blank" rel="noopener noreferrer">délégation du Défenseur des droits</a> de votre région</li>
+                </ul>
+                <p><strong>Coordonnées du Défenseur des droits :</strong></p>
+                <ul>
+                    <li>Site web : <a href="https://www.defenseurdesdroits.fr" target="_blank" rel="noopener noreferrer">www.defenseurdesdroits.fr</a></li>
+                    <li>Téléphone : 09 69 39 00 00 (appel gratuit depuis un poste fixe)</li>
+                    <li>Adresse postale : Le Défenseur des droits, Libre réponse 71120, 75342 Paris Cedex 07</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions-legales">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/cart-manager.js"></script>
+</body>
+</html>
+

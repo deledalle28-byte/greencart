@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte – Tableau de bord | GreenCart</title>
+    <meta name="description" content="Accédez à votre espace GreenCart : suivez vos commandes, gérez vos adresses, retrouvez vos producteurs favoris et mettez à jour vos informations de compte.">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="canonical" href="https://greencart.fr/mon-compte/" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/mon-compte" aria-label="Mon compte" class="icon-link" aria-current="page">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    <a href="/panier" aria-label="Panier" class="icon-link cart-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" aria-live="polite">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <h1>Bonjour Camille, bienvenue dans votre espace GreenCart</h1>
+            <p class="page-intro">Depuis cet espace, vous pouvez suivre vos commandes, gérer vos adresses, retrouver vos favoris et mettre à jour vos informations de compte.</p>
+
+            <nav class="account-nav" aria-label="Navigation du compte">
+                <ul class="account-nav-list">
+                    <li><a href="/mon-compte" aria-current="page">Tableau de bord</a></li>
+                    <li><a href="/mon-compte/commandes">Mes commandes</a></li>
+                    <li><a href="/mon-compte/adresses">Mes adresses</a></li>
+                    <li><a href="/mon-compte/favoris">Mes producteurs & produits favoris</a></li>
+                    <li><a href="/mon-compte/informations">Mes informations</a></li>
+                    <li><a href="/mon-compte/parametres">Paramètres & sécurité</a></li>
+                    <li><a href="/aide">Aide & support</a></li>
+                </ul>
+            </nav>
+
+            <!-- Bloc 1 – Synthèse rapide -->
+            <section class="dashboard-summary">
+                <div class="summary-cards">
+                    <article class="summary-card">
+                        <h3>Prochaine livraison</h3>
+                        <p class="summary-info">Mercredi 12 mars – 18h00–20h00</p>
+                        <p class="summary-detail">Commande GC-2025-001234</p>
+                        <a href="/mon-compte/commandes/GC-2025-001234" class="summary-link">Voir les détails</a>
+                    </article>
+
+                    <article class="summary-card">
+                        <h3>Dernière commande</h3>
+                        <p class="summary-info">Passée le 5 mars 2025</p>
+                        <p class="summary-detail">Total : 52,40 €</p>
+                        <a href="/mon-compte/commandes/GC-2025-001189" class="summary-link">Voir la commande</a>
+                    </article>
+
+                    <article class="summary-card">
+                        <h3>Producteurs favoris</h3>
+                        <p class="summary-info">3 producteurs enregistrés</p>
+                        <a href="/mon-compte/favoris" class="summary-link">Voir mes producteurs</a>
+                    </article>
+
+                    <article class="summary-card">
+                        <h3>Compte & coordonnées</h3>
+                        <p class="summary-info">12 rue des Tilleuls</p>
+                        <p class="summary-detail">75011 Paris, France</p>
+                        <a href="/mon-compte/informations" class="summary-link">Mettre à jour mes infos</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Bloc 2 – Historique de commandes -->
+            <section class="dashboard-section">
+                <h2>Mes dernières commandes</h2>
+                <p class="section-intro">Retrouvez ici les dernières commandes passées sur GreenCart. Vous pouvez consulter le détail, télécharger les factures ou suivre la livraison.</p>
+                
+                <div class="orders-table-wrapper">
+                    <table class="orders-table" role="table" aria-label="Historique des commandes">
+                        <thead>
+                            <tr>
+                                <th scope="col">Numéro</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Statut</th>
+                                <th scope="col">Montant</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>GC-2025-001234</strong></td>
+                                <td>12 mars 2025</td>
+                                <td><span class="status-badge status-delivery">En cours de livraison</span></td>
+                                <td>83,10 €</td>
+                                <td class="actions-cell">
+                                    <a href="/mon-compte/commandes/GC-2025-001234" class="action-link">Voir le détail</a>
+                                    <a href="/suivi?order=GC-2025-001234" class="action-link">Suivre</a>
+                                    <a href="/mon-compte/commandes/GC-2025-001234/facture" class="action-link">Facture</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>GC-2025-001189</strong></td>
+                                <td>5 mars 2025</td>
+                                <td><span class="status-badge status-delivered">Livrée</span></td>
+                                <td>52,40 €</td>
+                                <td class="actions-cell">
+                                    <a href="/mon-compte/commandes/GC-2025-001189" class="action-link">Voir le détail</a>
+                                    <a href="/mon-compte/commandes/GC-2025-001189/facture" class="action-link">Facture</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>GC-2025-001156</strong></td>
+                                <td>28 février 2025</td>
+                                <td><span class="status-badge status-delivered">Livrée</span></td>
+                                <td>67,80 €</td>
+                                <td class="actions-cell">
+                                    <a href="/mon-compte/commandes/GC-2025-001156" class="action-link">Voir le détail</a>
+                                    <a href="/mon-compte/commandes/GC-2025-001156/facture" class="action-link">Facture</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="section-footer">
+                    <a href="/mon-compte/commandes" class="btn-secondary">Voir toutes mes commandes</a>
+                </div>
+            </section>
+
+            <!-- Bloc 3 – Mes adresses -->
+            <section class="dashboard-section">
+                <h2>Mes adresses</h2>
+                <p class="section-intro">Gérer vos adresses de livraison et de facturation facilite vos prochaines commandes.</p>
+                
+                <div class="addresses-grid">
+                    <article class="address-card">
+                        <div class="address-header">
+                            <h3>Adresse de livraison principale</h3>
+                            <span class="address-badge">Par défaut</span>
+                        </div>
+                        <address class="address-content">
+                            Camille Dupont<br>
+                            12 rue des Tilleuls<br>
+                            75011 Paris, France
+                        </address>
+                        <div class="address-actions">
+                            <a href="/mon-compte/adresses/modifier/1" class="action-link">Modifier</a>
+                            <a href="/mon-compte/adresses/supprimer/1" class="action-link delete-link">Supprimer</a>
+                        </div>
+                    </article>
+
+                    <article class="address-card">
+                        <div class="address-header">
+                            <h3>Adresse de facturation</h3>
+                        </div>
+                        <address class="address-content">
+                            Camille Dupont<br>
+                            12 rue des Tilleuls<br>
+                            75011 Paris, France
+                        </address>
+                        <div class="address-actions">
+                            <a href="/mon-compte/adresses/modifier/2" class="action-link">Modifier</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="section-footer">
+                    <a href="/mon-compte/adresses/ajouter" class="btn-secondary">Ajouter une nouvelle adresse</a>
+                </div>
+            </section>
+
+            <!-- Bloc 4 – Producteurs & produits favoris -->
+            <section class="dashboard-section">
+                <h2>Mes producteurs & produits favoris</h2>
+                <p class="section-intro">Retrouvez rapidement les fermes et produits que vous commandez le plus souvent.</p>
+                
+                <div class="favorites-section">
+                    <div class="favorites-subsection">
+                        <h3>Producteurs favoris</h3>
+                        <div class="producers-favorites">
+                            <article class="producer-favorite-card">
+                                <div class="producer-info">
+                                    <h4>Ferme des Tilleuls</h4>
+                                    <p class="producer-details">Maraîchage, Saint-Martin-sur-Vallée</p>
+                                </div>
+                                <a href="/producteurs/ferme-des-tilleuls" class="btn-secondary">Voir les produits</a>
+                            </article>
+                            
+                            <article class="producer-favorite-card">
+                                <div class="producer-info">
+                                    <h4>Atelier des Vergers</h4>
+                                    <p class="producer-details">Confitures & jus artisanaux</p>
+                                </div>
+                                <a href="/producteurs/atelier-vergers" class="btn-secondary">Voir la fiche producteur</a>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <div class="favorites-subsection">
+                        <h3>Produits favoris</h3>
+                        <div class="products-favorites">
+                            <article class="product-favorite-card">
+                                <img src="/images/panier de légumes.jpg" alt="Panier de légumes de saison" class="product-favorite-image">
+                                <div class="product-favorite-info">
+                                    <h4>Panier de légumes de saison</h4>
+                                    <p class="product-favorite-price">18,90 €</p>
+                                    <a href="/produit/panier-legumes" class="btn-secondary">Voir le produit</a>
+                                </div>
+                            </article>
+                            
+                            <article class="product-favorite-card">
+                                <img src="/images/plateau fromage.jpg" alt="Fromages fermiers assortis" class="product-favorite-image">
+                                <div class="product-favorite-info">
+                                    <h4>Fromages fermiers assortis</h4>
+                                    <p class="product-favorite-price">24,50 €</p>
+                                    <a href="/produit/fromages" class="btn-secondary">Voir le produit</a>
+                                </div>
+                            </article>
+                            
+                            <article class="product-favorite-card">
+                                <img src="/images/confiture.jpg" alt="Coffret confitures artisanales" class="product-favorite-image">
+                                <div class="product-favorite-info">
+                                    <h4>Coffret confitures artisanales</h4>
+                                    <p class="product-favorite-price">14,90 €</p>
+                                    <a href="/produit/confitures" class="btn-secondary">Voir le produit</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bloc 5 – Mes informations & paramètres -->
+            <section class="dashboard-section">
+                <h2>Mes informations & paramètres</h2>
+                <p class="section-intro">Gérez vos informations personnelles, vos préférences de communication et la sécurité de votre compte.</p>
+                
+                <div class="settings-grid">
+                    <article class="settings-card">
+                        <h3>Infos perso</h3>
+                        <dl class="info-list">
+                            <dt>Nom & prénom :</dt>
+                            <dd>Camille Dupont</dd>
+                            <dt>Adresse e-mail :</dt>
+                            <dd>camille.dupont@email.com</dd>
+                            <dt>Téléphone :</dt>
+                            <dd>06 12 34 56 78</dd>
+                        </dl>
+                        <a href="/mon-compte/informations" class="btn-secondary">Modifier mes informations</a>
+                    </article>
+                    
+                    <article class="settings-card">
+                        <h3>Préférences de communication</h3>
+                        <div class="preferences-list">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked disabled>
+                                <span>Recevoir les actualités des producteurs et les offres GreenCart</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" disabled>
+                                <span>Recevoir des rappels de panier ou de commande par e-mail</span>
+                            </label>
+                        </div>
+                        <a href="/mon-compte/parametres" class="btn-secondary">Gérer mes préférences</a>
+                    </article>
+                    
+                    <article class="settings-card">
+                        <h3>Sécurité du compte</h3>
+                        <dl class="info-list">
+                            <dt>Dernière connexion :</dt>
+                            <dd>12 mars 2025 – 09h24</dd>
+                            <dt>Connexion en cours :</dt>
+                            <dd>Chrome sur Windows</dd>
+                        </dl>
+                        <div class="security-actions">
+                            <a href="/mon-compte/parametres/mot-de-passe" class="btn-secondary">Modifier mon mot de passe</a>
+                            <a href="/mon-compte/parametres/google" class="btn-secondary">Gérer la connexion avec Google</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Bloc 6 – Aide & support -->
+            <section class="dashboard-section">
+                <h2>Besoin d'aide ?</h2>
+                <p class="section-intro">Vous avez une question à propos d'une commande, d'une livraison ou d'un produit ? Vous pouvez consulter l'aide ou contacter notre équipe.</p>
+                
+                <div class="help-actions">
+                    <a href="/aide" class="btn-primary">Consulter l'aide & FAQ</a>
+                    <a href="/contact" class="btn-secondary">Contacter le support</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions-legales">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/cart-manager.js"></script>
+    <script src="/search.js"></script>
+</body>
+</html>
+

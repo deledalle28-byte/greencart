@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta SEO -->
+    <title>Paniers & produits locaux de nos producteurs | GreenCart</title>
+    <meta name="description" content="Découvrez tous les paniers de saison et produits locaux proposés par les fermes et artisans partenaires de GreenCart : légumes, produits laitiers, épicerie, boissons et coffrets, livrés en circuits courts près de chez vous.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Paniers & produits locaux de nos producteurs | GreenCart">
+    <meta property="og:description" content="Découvrez tous les paniers de saison et produits locaux proposés par les fermes et artisans partenaires de GreenCart.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Lien d'accessibilité : Aller au contenu principal -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Bloc 1 – Bandeau top -->
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <!-- Bloc 2 – Header / Navigation -->
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits" aria-current="page">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/compte" aria-label="Mon compte" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span class="visually-hidden">Mon compte</span>
+                    </a>
+                    <a href="/panier" aria-label="Panier, 0 article" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 2 14h12l4-14H5"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                        <span class="visually-hidden">Panier</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Bloc principal : Page produits -->
+    <main id="main-content" role="main">
+        <!-- Bandeau intro catégorie -->
+        <div class="category-banner">
+            <div class="container">
+                <p>Livraison neutre en carbone dès 40 € d'achat • Produits issus de fermes locales partenaires</p>
+            </div>
+        </div>
+        
+        <!-- Section intro + H1 -->
+        <section class="products-intro">
+            <div class="container">
+                <h1>Paniers & produits locaux de nos producteurs</h1>
+                <p class="intro-text">
+                    Retrouvez ici l'ensemble des paniers et produits locaux proposés par les fermes et artisans partenaires de GreenCart : légumes de saison, produits laitiers fermiers, épicerie artisanale, boissons locales et coffrets. Utilisez les filtres pour affiner selon vos besoins : type de produit, producteur, labels, prix ou zone de livraison.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Section carte des producteurs -->
+        <section class="producers-map-section">
+            <div class="container">
+                <div class="map-section-header">
+                    <div class="map-header-content">
+                        <h2>Trouvez les producteurs près de chez vous</h2>
+                        <p>Découvrez sur la carte tous nos producteurs partenaires et leur distance par rapport à votre position</p>
+                    </div>
+                    <button type="button" class="btn-map-toggle btn-map-primary" id="toggle-map-btn" aria-label="Afficher la carte des producteurs">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Afficher la carte
+                    </button>
+                </div>
+                <div class="map-container" id="producers-map" style="display: none;">
+                    <div id="map"></div>
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <div class="legend-marker user-legend"></div>
+                            <span>Votre position</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-marker producer-legend"></div>
+                            <span>Producteurs partenaires</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Filtres & Tri -->
+        <section class="filters-section" aria-labelledby="filters-title">
+            <div class="container">
+                <h2 id="filters-title" class="visually-hidden">Filtrer et trier les produits</h2>
+                <div class="filters-layout">
+                    <!-- Zone filtres (gauche) -->
+                    <aside class="filters-sidebar" role="complementary" aria-label="Filtres de recherche">
+                        <form class="filters-form" id="filters-form">
+                            <!-- Filtre Type de produit -->
+                            <div class="filter-group">
+                                <label for="filter-type" class="filter-label">Type de produit</label>
+                                <select id="filter-type" name="type" class="filter-select">
+                                    <option value="">Tous les types</option>
+                                    <option value="paniers-legumes">Paniers de légumes</option>
+                                    <option value="laitiers">Produits laitiers & œufs</option>
+                                    <option value="epicerie">Épicerie artisanale</option>
+                                    <option value="boissons">Boissons locales</option>
+                                    <option value="coffrets">Coffrets & paniers cadeaux</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Filtre Producteur -->
+                            <div class="filter-group">
+                                <label for="filter-producer" class="filter-label">Producteur / ferme</label>
+                                <select id="filter-producer" name="producer" class="filter-select">
+                                    <option value="">Tous les producteurs</option>
+                                    <option value="ferme-tilleuls">Ferme des Tilleuls</option>
+                                    <option value="gaec-pre-vert">GAEC du Pré Vert</option>
+                                    <option value="atelier-vergers">Atelier des Vergers</option>
+                                    <option value="cueillette-vallee">Cueillette de la Vallée</option>
+                                    <option value="rucher-bois-vert">Rucher du Bois Vert</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Filtre Labels & pratiques -->
+                            <div class="filter-group">
+                                <fieldset class="filter-fieldset">
+                                    <legend class="filter-label">Labels & pratiques</legend>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="labels" value="bio" class="filter-checkbox">
+                                            <span>Agriculture biologique</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="labels" value="sans-pesticides" class="filter-checkbox">
+                                            <span>Sans pesticides de synthèse</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="labels" value="circuit-court" class="filter-checkbox">
+                                            <span>Circuit court</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="labels" value="sans-plastique" class="filter-checkbox">
+                                            <span>Sans emballage plastique</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            
+                            <!-- Filtre Prix -->
+                            <div class="filter-group">
+                                <label for="filter-price" class="filter-label">Prix</label>
+                                <select id="filter-price" name="price" class="filter-select">
+                                    <option value="">Tous les prix</option>
+                                    <option value="0-10">Moins de 10 €</option>
+                                    <option value="10-20">10–20 €</option>
+                                    <option value="20+">Plus de 20 €</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Filtre Zone de livraison -->
+                            <div class="filter-group">
+                                <label for="filter-delivery" class="filter-label">Zone de livraison</label>
+                                <select id="filter-delivery" name="delivery" class="filter-select">
+                                    <option value="">Toute la zone desservie</option>
+                                    <option value="local">Voir les producteurs près de moi</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="btn btn-secondary btn-reset-filters" id="reset-filters-btn">
+                                Réinitialiser les filtres
+                            </button>
+                        </form>
+                    </aside>
+                    
+                    <!-- Zone contenu principal (droite) -->
+                    <div class="products-main">
+                        <!-- Zone Tri -->
+                        <div class="sort-bar">
+                            <label for="sort-select" class="sort-label">Trier par :</label>
+                            <select id="sort-select" name="sort" class="sort-select">
+                                <option value="relevance">Pertinence</option>
+                                <option value="price-asc">Prix croissant</option>
+                                <option value="price-desc">Prix décroissant</option>
+                                <option value="popularity">Popularité</option>
+                                <option value="newest">Nouveautés</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Filtres actifs + compteur -->
+                        <div class="active-filters-bar">
+                            <div class="products-count">
+                                <span id="products-count">48</span> produits trouvés
+                            </div>
+                            <div class="active-filters" id="active-filters">
+                                <!-- Les filtres actifs seront ajoutés dynamiquement -->
+                            </div>
+                            <button type="button" class="btn-clear-all" id="clear-all-filters" style="display: none;">
+                                Réinitialiser les filtres
+                            </button>
+                        </div>
+                        
+                        <!-- Grille de produits -->
+                        <div class="products-section" aria-labelledby="products-title">
+                            <h2 id="products-title">Tous nos paniers & produits locaux</h2>
+                            
+                            <!-- État "aucun produit trouvé" (caché par défaut) -->
+                            <div class="no-products" id="no-products" style="display: none;">
+                                <h3>Aucun produit ne correspond à ces critères</h3>
+                                <p>Essayez de modifier ou de supprimer certains filtres (par exemple la fourchette de prix ou le type de produit), ou explorez directement tous les paniers de saison.</p>
+                                <button type="button" class="btn btn-primary" id="reset-filters-no-products">
+                                    Réinitialiser les filtres
+                                </button>
+                            </div>
+                            
+                            <!-- Grille produits -->
+                            <div class="products-grid" id="products-grid">
+                                <!-- Produit 1 -->
+                                <article class="product-card">
+                                    <img 
+                                        src="/images/panier de légumes.jpg" 
+                                        alt="Panier de légumes de saison – Ferme des Tilleuls"
+                                        loading="lazy"
+                                    >
+                                    <div class="product-badges">
+                                        <span class="badge badge-local">Local</span>
+                                        <span class="badge badge-season">De saison</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3><a href="/produit.html">Panier de légumes de saison – Ferme des Tilleuls</a></h3>
+                                        <p class="product-producer-name">Ferme des Tilleuls</p>
+                                        <div class="product-rating" aria-label="Note : 4,6 sur 5">
+                                            <span aria-hidden="true">★★★★☆</span>
+                                            <span class="rating-text">4,6</span>
+                                            <span class="rating-count">(128)</span>
+                                        </div>
+                                        <div class="product-price">18,90 €</div>
+                                        <p class="product-unit-small">Pour 2 à 3 personnes</p>
+                                        <a href="/produit.html" class="btn btn-product">Voir le produit</a>
+                                    </div>
+                                </article>
+                                
+                                <!-- Produit 2 -->
+                                <article class="product-card">
+                                    <img 
+                                        src="/images/plateau fromage.jpg" 
+                                        alt="Fromages fermiers assortis – GAEC du Pré Vert"
+                                        loading="lazy"
+                                    >
+                                    <div class="product-badges">
+                                        <span class="badge badge-fermier">Fermier</span>
+                                        <span class="badge badge-local">Local</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3><a href="/produit.html">Fromages fermiers assortis – GAEC du Pré Vert</a></h3>
+                                        <p class="product-producer-name">GAEC du Pré Vert</p>
+                                        <div class="product-rating" aria-label="Note : 4,8 sur 5">
+                                            <span aria-hidden="true">★★★★★</span>
+                                            <span class="rating-text">4,8</span>
+                                            <span class="rating-count">(95)</span>
+                                        </div>
+                                        <div class="product-price">24,50 €</div>
+                                        <a href="/produit.html" class="btn btn-product">Voir le produit</a>
+                                    </div>
+                                </article>
+                                
+                                <!-- Produit 3 -->
+                                <article class="product-card">
+                                    <img 
+                                        src="/images/confiture.jpg" 
+                                        alt="Coffret confitures artisanales – Atelier des Vergers"
+                                        loading="lazy"
+                                    >
+                                    <div class="product-badges">
+                                        <span class="badge badge-artisanal">Artisanal</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3><a href="/produit.html">Coffret confitures artisanales – Atelier des Vergers</a></h3>
+                                        <p class="product-producer-name">Atelier des Vergers</p>
+                                        <div class="product-rating" aria-label="Note : 4,5 sur 5">
+                                            <span aria-hidden="true">★★★★☆</span>
+                                            <span class="rating-text">4,5</span>
+                                            <span class="rating-count">(67)</span>
+                                        </div>
+                                        <div class="product-price">14,90 €</div>
+                                        <a href="/produit.html" class="btn btn-product">Voir le produit</a>
+                                    </div>
+                                </article>
+                                
+                                <!-- Produit 4 -->
+                                <article class="product-card">
+                                    <img 
+                                        src="/images/jus de pomme.jpg" 
+                                        alt="Jus de pomme artisanal – Cueillette de la Vallée"
+                                        loading="lazy"
+                                    >
+                                    <div class="product-badges">
+                                        <span class="badge badge-local">Local</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3><a href="/produit.html">Jus de pomme artisanal – Cueillette de la Vallée</a></h3>
+                                        <p class="product-producer-name">Cueillette de la Vallée</p>
+                                        <div class="product-rating" aria-label="Note : 4,4 sur 5">
+                                            <span aria-hidden="true">★★★★☆</span>
+                                            <span class="rating-text">4,4</span>
+                                            <span class="rating-count">(52)</span>
+                                        </div>
+                                        <div class="product-price">5,20 €</div>
+                                        <a href="/produit.html" class="btn btn-product">Voir le produit</a>
+                                    </div>
+                                </article>
+                                
+                                <!-- Produit 5 -->
+                                <article class="product-card">
+                                    <img 
+                                        src="/images/panier producteur.jpg" 
+                                        alt="Panier famille – 4 à 5 personnes – Ferme des Tilleuls"
+                                        loading="lazy"
+                                    >
+                                    <div class="product-badges">
+                                        <span class="badge badge-famille">Famille</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3><a href="/produit.html">Panier famille – 4 à 5 personnes – Ferme des Tilleuls</a></h3>
+                                        <p class="product-producer-name">Ferme des Tilleuls</p>
+                                        <div class="product-rating" aria-label="Note : 4,9 sur 5">
+                                            <span aria-hidden="true">★★★★★</span>
+                                            <span class="rating-text">4,9</span>
+                                            <span class="rating-count">(203)</span>
+                                        </div>
+                                        <div class="product-price">29,90 €</div>
+                                        <a href="/produit.html" class="btn btn-product">Voir le produit</a>
+                                    </div>
+                                </article>
+                                
+                                <!-- Produit 6 -->
+                                <article class="product-card">
+                                    <img 
+                                        src="/images/Herbes aromatiques en bouquet.jpg" 
+                                        alt="Herbes aromatiques en bouquet – Ferme des Tilleuls"
+                                        loading="lazy"
+                                    >
+                                    <div class="product-badges">
+                                        <span class="badge badge-local">Local</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3><a href="/produit.html">Herbes aromatiques en bouquet – Ferme des Tilleuls</a></h3>
+                                        <p class="product-producer-name">Ferme des Tilleuls</p>
+                                        <div class="product-rating" aria-label="Note : 4,4 sur 5">
+                                            <span aria-hidden="true">★★★★☆</span>
+                                            <span class="rating-text">4,4</span>
+                                            <span class="rating-count">(38)</span>
+                                        </div>
+                                        <div class="product-price">3,50 €</div>
+                                        <a href="/produit.html" class="btn btn-product">Voir le produit</a>
+                                    </div>
+                                </article>
+                                
+                                <!-- Produit 7 -->
+                                <article class="product-card">
+                                    <img 
+                                        src="/images/Soupe de légumes prête à réchauffer.jpg" 
+                                        alt="Soupe de légumes prête à réchauffer – 1L – Ferme des Tilleuls"
+                                        loading="lazy"
+                                    >
+                                    <div class="product-badges">
+                                        <span class="badge badge-local">Local</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3><a href="/produit.html">Soupe de légumes prête à réchauffer – 1L – Ferme des Tilleuls</a></h3>
+                                        <p class="product-producer-name">Ferme des Tilleuls</p>
+                                        <div class="product-rating" aria-label="Note : 4,5 sur 5">
+                                            <span aria-hidden="true">★★★★☆</span>
+                                            <span class="rating-text">4,5</span>
+                                            <span class="rating-count">(41)</span>
+                                        </div>
+                                        <div class="product-price">6,90 €</div>
+                                        <a href="/produit.html" class="btn btn-product">Voir le produit</a>
+                                    </div>
+                                </article>
+                                
+                                <!-- Produit 8 -->
+                                <article class="product-card">
+                                    <img 
+                                        src="/images/Miel de fleurs de la vallée.jpg" 
+                                        alt="Miel de fleurs de la vallée – Rucher du Bois Vert"
+                                        loading="lazy"
+                                    >
+                                    <div class="product-badges">
+                                        <span class="badge badge-artisanal">Artisanal</span>
+                                        <span class="badge badge-local">Local</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3><a href="/produit.html">Miel de fleurs de la vallée – Rucher du Bois Vert</a></h3>
+                                        <p class="product-producer-name">Rucher du Bois Vert</p>
+                                        <div class="product-rating" aria-label="Note : 4,9 sur 5">
+                                            <span aria-hidden="true">★★★★★</span>
+                                            <span class="rating-text">4,9</span>
+                                            <span class="rating-count">(127)</span>
+                                        </div>
+                                        <div class="product-price">9,80 €</div>
+                                        <a href="/produit.html" class="btn btn-product">Voir le produit</a>
+                                    </div>
+                                </article>
+                            </div>
+                            
+                            <!-- Pagination / Charger plus -->
+                            <div class="pagination-section">
+                                <button type="button" class="btn btn-secondary btn-load-more" id="load-more-btn">
+                                    Charger plus de produits
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bloc texte SEO en bas -->
+        <section class="seo-section" aria-labelledby="seo-title">
+            <div class="container">
+                <h2 id="seo-title">Pourquoi acheter en direct des producteurs locaux ?</h2>
+                <div class="seo-content">
+                    <p>En regroupant paniers de saison, produits frais et épicerie artisanale sur une même page, GreenCart vous permet de découvrir rapidement l'ensemble de l'offre locale disponible près de chez vous. Chaque produit présenté sur cette page provient de fermes ou d'ateliers partenaires, sélectionnés pour la qualité de leurs pratiques et la transparence sur l'origine.</p>
+                    <p>En commandant depuis cette page, vous soutenez directement les producteurs de votre territoire tout en réduisant les intermédiaires et l'empreinte carbone liée à vos courses. Les filtres vous aident à trouver en quelques clics les paniers et produits adaptés à votre budget, à vos envies et à vos contraintes de livraison. C'est une porte d'entrée simple vers une consommation plus responsable, en cohérence avec les engagements de GreenCart.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions-legales">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="/cart-manager.js"></script>
+    <script src="/search.js"></script>
+    <script src="/script.js"></script>
+    <script src="/products.js"></script>
+</body>
+</html>
+

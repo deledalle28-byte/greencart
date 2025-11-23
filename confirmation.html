@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta SEO -->
+    <title>Merci pour votre commande – GreenCart</title>
+    <meta name="description" content="Votre commande de paniers et produits locaux a bien été confirmée. Retrouvez le récapitulatif de votre commande GreenCart, les informations de livraison et les prochaines étapes.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://greencart.fr/commande/confirmation/">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Lien d'accessibilité : Aller au contenu principal -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Bloc 1 – Bandeau top -->
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <!-- Bloc 2 – Header / Navigation -->
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input-confirmation" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input-confirmation" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/compte" aria-label="Mon compte" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span class="visually-hidden">Mon compte</span>
+                    </a>
+                    <a href="/panier" aria-label="Panier" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 13 13"></path>
+                            <path d="M3 1h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z"></path>
+                        </svg>
+                        <span class="visually-hidden">Panier</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <div class="container confirmation-container">
+            <!-- Message de succès (aria-live pour accessibilité) -->
+            <div class="confirmation-success" role="status" aria-live="polite">
+                <h1>Merci pour votre commande !</h1>
+                <p class="confirmation-intro">Votre commande a bien été enregistrée. Un e-mail de confirmation vient de vous être envoyé avec le détail de vos paniers, votre adresse de livraison et le récapitulatif du paiement.</p>
+                
+                <div class="order-number">
+                    <p class="order-number-label">Numéro de commande :</p>
+                    <p class="order-number-value">GC-2025-001234</p>
+                    <p class="order-number-help">Gardez ce numéro de commande, il vous sera utile pour le suivi ou pour toute question auprès de notre service client.</p>
+                </div>
+            </div>
+            
+            <div class="confirmation-layout">
+                <!-- Colonne principale -->
+                <div class="confirmation-main">
+                    <!-- H2 – Récapitulatif de votre commande -->
+                    <section class="confirmation-section">
+                        <h2>Récapitulatif de votre commande</h2>
+                        
+                        <div class="order-summary-card">
+                            <h3 class="order-products-title">Produits commandés :</h3>
+                            
+                            <div class="order-items-list">
+                                <div class="order-item">
+                                    <div class="order-item-info">
+                                        <h4 class="order-item-name">Panier de légumes de saison – Ferme des Tilleuls</h4>
+                                        <div class="order-item-details">
+                                            <span>Quantité : 2</span>
+                                            <span>Prix unitaire : 18,90 €</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-item-subtotal">
+                                        <span>Sous-total : 37,80 €</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-item">
+                                    <div class="order-item-info">
+                                        <h4 class="order-item-name">Fromages fermiers assortis – GAEC du Pré Vert</h4>
+                                        <div class="order-item-details">
+                                            <span>Quantité : 1</span>
+                                            <span>Prix unitaire : 24,50 €</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-item-subtotal">
+                                        <span>Sous-total : 24,50 €</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-item">
+                                    <div class="order-item-info">
+                                        <h4 class="order-item-name">Coffret confitures artisanales – Atelier des Vergers</h4>
+                                        <div class="order-item-details">
+                                            <span>Quantité : 1</span>
+                                            <span>Prix unitaire : 14,90 €</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-item-subtotal">
+                                        <span>Sous-total : 14,90 €</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="order-total-summary">
+                                <div class="order-total-line">
+                                    <span>Sous-total produits</span>
+                                    <span>77,20 €</span>
+                                </div>
+                                <div class="order-total-line">
+                                    <span>Livraison</span>
+                                    <span>4,90 €</span>
+                                </div>
+                                <div class="order-total-line">
+                                    <span>Contribution emballages réutilisables</span>
+                                    <span>1,00 €</span>
+                                </div>
+                                <div class="order-total-final">
+                                    <span>Total TTC</span>
+                                    <span>83,10 €</span>
+                                </div>
+                            </div>
+                            
+                            <p class="order-summary-note">Vous recevrez un rappel de ce récapitulatif par e-mail. Si vous constatez une erreur, contactez-nous dès que possible avant la préparation de votre commande.</p>
+                        </div>
+                    </section>
+                    
+                    <!-- H2 – Livraison & suivi -->
+                    <section class="confirmation-section">
+                        <h2>Livraison & suivi</h2>
+                        
+                        <div class="confirmation-card">
+                            <div class="delivery-info-block">
+                                <h3>Adresse de livraison</h3>
+                                <address class="delivery-address">
+                                    Camille Dupont<br>
+                                    12 rue des Tilleuls<br>
+                                    75011 Paris, France
+                                </address>
+                            </div>
+                            
+                            <div class="delivery-info-block">
+                                <h3>Date & créneau</h3>
+                                <p><strong>Date de livraison prévue :</strong> Mercredi 12 mars</p>
+                                <p><strong>Créneau horaire :</strong> 18h00 – 20h00</p>
+                            </div>
+                            
+                            <div class="delivery-info-block">
+                                <h3>Mode de livraison</h3>
+                                <p><strong>Mode de livraison :</strong> Livraison à domicile</p>
+                            </div>
+                            
+                            <div class="delivery-tracking">
+                                <p>Vous pourrez suivre l'avancement de votre commande (préparation, prise en charge, livraison) depuis votre espace GreenCart ou via le lien présent dans l'e-mail de confirmation.</p>
+                                
+                                <div class="delivery-actions">
+                                    <a href="/suivi/GC-2025-001234" class="btn-secondary">Voir le suivi de ma commande</a>
+                                    <a href="/compte/commandes" class="confirmation-link">Accéder à mon historique de commandes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- H2 – Votre paiement -->
+                    <section class="confirmation-section">
+                        <h2>Votre paiement</h2>
+                        
+                        <div class="confirmation-card">
+                            <p><strong>Moyen de paiement :</strong> Carte bancaire (Visa se terminant par •••• 42)</p>
+                            <p><strong>Montant payé :</strong> 83,10 € TTC</p>
+                            
+                            <p class="payment-note">Le paiement a été validé avec succès via notre prestataire de paiement sécurisé. Si votre banque a demandé une authentification (3D Secure), le débit ne sera effectif qu'après validation complète de cette étape.</p>
+                            
+                            <a href="/facture/GC-2025-001234" class="confirmation-link">Voir la facture / reçu de paiement (PDF)</a>
+                        </div>
+                    </section>
+                    
+                    <!-- H2 – Créer votre compte GreenCart -->
+                    <section class="confirmation-section account-section">
+                        <h2>Créer votre compte GreenCart (facultatif)</h2>
+                        
+                        <div class="confirmation-card">
+                            <p>Vous pouvez finaliser votre commande sans créer de compte, mais un compte GreenCart vous permet de :</p>
+                            
+                            <ul class="account-benefits">
+                                <li>suivre plus facilement vos commandes et vos livraisons,</li>
+                                <li>enregistrer vos adresses et préférences,</li>
+                                <li>accéder plus rapidement aux paniers de vos producteurs favoris,</li>
+                                <li>retrouver vos factures à tout moment.</li>
+                            </ul>
+                            
+                            <div class="account-actions">
+                                <a href="/compte/creer?order=GC-2025-001234" class="btn-primary">Créer mon compte en 1 clic</a>
+                                <p class="account-help">Nous préremplirons votre compte avec les informations de cette commande.</p>
+                                <a href="/" class="confirmation-link">Non merci, revenir à la page d'accueil</a>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- H2 – Vous pourriez aussi aimer -->
+                    <section class="confirmation-section">
+                        <h2>Vous pourriez aussi aimer</h2>
+                        
+                        <p class="section-intro">En attendant votre livraison, découvrez d'autres produits de nos fermes et ateliers partenaires.</p>
+                        
+                        <div class="related-products-grid">
+                            <article class="product-card">
+                                <img src="/images/Soupe de légumes prête à réréchauffer.jpg" alt="Soupe de légumes prête à réchauffer – Ferme des Tilleuls" class="product-image" loading="lazy">
+                                <div class="product-info">
+                                    <h3 class="product-title">Soupe de légumes prête à réchauffer – Ferme des Tilleuls</h3>
+                                    <p class="product-producer">Ferme des Tilleuls</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">6,90 €</span>
+                                        <a href="/produit/soupe-legumes" class="btn-product">Voir le produit</a>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <article class="product-card">
+                                <img src="/images/Miel de fleurs de la vallée.jpg" alt="Miel de fleurs de la vallée – Rucher du Bois Vert" class="product-image" loading="lazy">
+                                <div class="product-info">
+                                    <h3 class="product-title">Miel de fleurs de la vallée – Rucher du Bois Vert</h3>
+                                    <p class="product-producer">Rucher du Bois Vert</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">9,80 €</span>
+                                        <a href="/produit/miel" class="btn-product">Voir le produit</a>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <article class="product-card">
+                                <img src="/images/jus de pomme.jpg" alt="Jus de pomme artisanal – Cueillette de la Vallée" class="product-image" loading="lazy">
+                                <div class="product-info">
+                                    <h3 class="product-title">Jus de pomme artisanal – Cueillette de la Vallée</h3>
+                                    <p class="product-producer">Cueillette de la Vallée</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">5,20 €</span>
+                                        <a href="/produit/jus-pomme" class="btn-product">Voir le produit</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="related-products-cta">
+                            <a href="/produits" class="btn-secondary">Découvrir tous les paniers & produits locaux</a>
+                        </div>
+                    </section>
+                    
+                    <!-- H2 – Votre avis compte -->
+                    <section class="confirmation-section feedback-section">
+                        <h2>Votre avis compte</h2>
+                        
+                        <div class="confirmation-card">
+                            <p>Aidez-nous à améliorer votre expérience GreenCart en répondant à cette courte question (moins de 30 secondes) :</p>
+                            
+                            <form class="feedback-form" id="feedback-form" novalidate>
+                                <div class="form-group">
+                                    <fieldset class="radio-group">
+                                        <legend>Comment s'est passée votre expérience de commande aujourd'hui ?</legend>
+                                        
+                                        <div class="radio-option">
+                                            <input type="radio" id="feedback-very-easy" name="feedback-experience" value="very-easy" aria-required="true">
+                                            <label for="feedback-very-easy">Très simple</label>
+                                        </div>
+                                        
+                                        <div class="radio-option">
+                                            <input type="radio" id="feedback-easy" name="feedback-experience" value="easy" aria-required="true">
+                                            <label for="feedback-easy">Plutôt simple</label>
+                                        </div>
+                                        
+                                        <div class="radio-option">
+                                            <input type="radio" id="feedback-difficult" name="feedback-experience" value="difficult" aria-required="true">
+                                            <label for="feedback-difficult">Plutôt compliquée</label>
+                                        </div>
+                                        
+                                        <div class="radio-option">
+                                            <input type="radio" id="feedback-very-difficult" name="feedback-experience" value="very-difficult" aria-required="true">
+                                            <label for="feedback-very-difficult">Très compliquée</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="feedback-comment">Un commentaire à ajouter ?</label>
+                                    <textarea 
+                                        id="feedback-comment" 
+                                        name="feedback-comment" 
+                                        rows="4"
+                                        placeholder="Dites-nous ce qui vous a plu ou ce qui pourrait être amélioré."
+                                        aria-describedby="feedback-comment-help"
+                                    ></textarea>
+                                    <span class="field-help" id="feedback-comment-help">Optionnel</span>
+                                </div>
+                                
+                                <button type="submit" class="btn-primary">Envoyer mon avis</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/cart-manager.js"></script>
+    <script src="/confirmation.js"></script>
+</body>
+</html>
+

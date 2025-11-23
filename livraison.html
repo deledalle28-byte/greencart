@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta SEO -->
+    <title>Livraison & coordonnées – GreenCart</title>
+    <meta name="description" content="Indiquez vos coordonnées et votre adresse de livraison pour finaliser votre commande de produits locaux GreenCart.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://greencart.fr/commande/livraison/">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Lien d'accessibilité : Aller au contenu principal -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Bloc 1 – Bandeau top -->
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <!-- Bloc 2 – Header / Navigation -->
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input-header" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input-header" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/compte" aria-label="Mon compte" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span class="visually-hidden">Mon compte</span>
+                    </a>
+                    <a href="/panier" aria-label="Panier" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 13 13"></path>
+                            <path d="M3 1h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z"></path>
+                        </svg>
+                        <span class="visually-hidden">Panier</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <div class="container checkout-container">
+            <!-- Fil d'Ariane -->
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <ol class="breadcrumb-list">
+                    <li><a href="/panier">Panier</a></li>
+                    <li aria-current="page">Livraison & coordonnées</li>
+                    <li>Paiement</li>
+                    <li>Confirmation</li>
+                </ol>
+            </nav>
+            
+            <!-- Indicateur d'étapes -->
+            <div class="checkout-steps" role="progressbar" aria-valuenow="2" aria-valuemin="1" aria-valuemax="4" aria-label="Progression de la commande">
+                <p class="checkout-step-indicator">Étape 2 sur 4 – Livraison & coordonnées</p>
+            </div>
+            
+            <!-- H1 + Intro -->
+            <div class="checkout-header">
+                <h1>Livraison & coordonnées</h1>
+                <p class="checkout-intro">Indiquez vos coordonnées et votre adresse de livraison pour nos producteurs. Vous pourrez encore vérifier ces informations avant le paiement final.</p>
+            </div>
+            
+            <!-- Résumé d'erreur (caché par défaut) -->
+            <div class="error-summary" id="error-summary" role="alert" aria-live="polite" style="display: none;">
+                <h2 class="error-summary-title">Certains champs sont manquants ou incorrects</h2>
+                <p>Merci de vérifier les informations ci-dessous.</p>
+                <ul class="error-summary-list" id="error-summary-list"></ul>
+            </div>
+            
+            <div class="checkout-layout">
+                <!-- Formulaire principal -->
+                <div class="checkout-form-wrapper">
+                    <form class="checkout-form" id="delivery-form" novalidate>
+                        <!-- H2 – Vos informations personnelles -->
+                        <section class="form-section">
+                            <h2>Vos informations personnelles</h2>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstname">
+                                        Prénom <span class="required" aria-label="requis">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="firstname" 
+                                        name="firstname" 
+                                        placeholder="Ex. : Camille"
+                                        autocomplete="given-name"
+                                        aria-required="true"
+                                        aria-describedby="firstname-error"
+                                    >
+                                    <span class="field-help" id="firstname-help"></span>
+                                    <span class="error-message" id="firstname-error" role="alert" aria-live="polite"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastname">
+                                        Nom <span class="required" aria-label="requis">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="lastname" 
+                                        name="lastname" 
+                                        placeholder="Ex. : Dupont"
+                                        autocomplete="family-name"
+                                        aria-required="true"
+                                        aria-describedby="lastname-error"
+                                    >
+                                    <span class="field-help" id="lastname-help"></span>
+                                    <span class="error-message" id="lastname-error" role="alert" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">
+                                    Adresse e-mail <span class="required" aria-label="requis">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="Ex. : camille.dupont@email.com"
+                                    autocomplete="email"
+                                    aria-required="true"
+                                    aria-describedby="email-help email-error"
+                                >
+                                <span class="field-help" id="email-help">Nous vous enverrons la confirmation de commande et le suivi de livraison à cette adresse.</span>
+                                <span class="error-message" id="email-error" role="alert" aria-live="polite"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">
+                                    Téléphone portable <span class="required" aria-label="requis">*</span>
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="Ex. : 06 12 34 56 78"
+                                    autocomplete="tel"
+                                    aria-required="true"
+                                    aria-describedby="phone-help phone-error"
+                                >
+                                <span class="field-help" id="phone-help">Utilisé uniquement en cas de besoin pour la livraison.</span>
+                                <span class="error-message" id="phone-error" role="alert" aria-live="polite"></span>
+                            </div>
+                        </section>
+                        
+                        <!-- H2 – Adresse de livraison -->
+                        <section class="form-section">
+                            <h2>Adresse de livraison</h2>
+                            
+                            <div class="form-group">
+                                <label for="address">
+                                    Adresse de livraison <span class="required" aria-label="requis">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="address" 
+                                    name="address" 
+                                    placeholder="Numéro et nom de rue"
+                                    autocomplete="street-address"
+                                    aria-required="true"
+                                    aria-describedby="address-help address-error"
+                                >
+                                <span class="field-help" id="address-help">Ex. : 12 rue des Tilleuls</span>
+                                <span class="error-message" id="address-error" role="alert" aria-live="polite"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address-complement">
+                                    Complément d'adresse
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="address-complement" 
+                                    name="address-complement" 
+                                    placeholder="Bâtiment, étage, résidence…"
+                                    autocomplete="address-line2"
+                                    aria-describedby="address-complement-help"
+                                >
+                                <span class="field-help" id="address-complement-help"></span>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="postal-code">
+                                        Code postal <span class="required" aria-label="requis">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="postal-code" 
+                                        name="postal-code" 
+                                        placeholder="Ex. : 75011"
+                                        autocomplete="postal-code"
+                                        aria-required="true"
+                                        aria-describedby="postal-code-error"
+                                    >
+                                    <span class="error-message" id="postal-code-error" role="alert" aria-live="polite"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="city">
+                                        Ville <span class="required" aria-label="requis">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="city" 
+                                        name="city" 
+                                        placeholder="Ex. : Paris"
+                                        autocomplete="address-level2"
+                                        aria-required="true"
+                                        aria-describedby="city-error"
+                                    >
+                                    <span class="error-message" id="city-error" role="alert" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">
+                                    Pays <span class="required" aria-label="requis">*</span>
+                                </label>
+                                <select 
+                                    id="country" 
+                                    name="country" 
+                                    autocomplete="country"
+                                    aria-required="true"
+                                    aria-describedby="country-error"
+                                >
+                                    <option value="FR" selected>France</option>
+                                    <option value="BE">Belgique</option>
+                                    <option value="CH">Suisse</option>
+                                </select>
+                                <span class="error-message" id="country-error" role="alert" aria-live="polite"></span>
+                            </div>
+                        </section>
+                        
+                        <!-- H2 – Mode de livraison -->
+                        <section class="form-section">
+                            <h2>Mode de livraison</h2>
+                            <p class="section-intro">Choisissez le mode de livraison qui vous convient. Les créneaux exacts seront proposés en fonction de votre adresse.</p>
+                            
+                            <fieldset class="radio-group" aria-describedby="delivery-mode-error">
+                                <legend class="visually-hidden">Mode de livraison</legend>
+                                
+                                <div class="radio-option">
+                                    <input 
+                                        type="radio" 
+                                        id="delivery-home" 
+                                        name="delivery-mode" 
+                                        value="home"
+                                        aria-required="true"
+                                    >
+                                    <label for="delivery-home">
+                                        <span class="radio-label">Livraison à domicile</span>
+                                        <span class="radio-description">Vos paniers et produits sont livrés directement à votre adresse, dans un créneau que vous choisissez.</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="radio-option">
+                                    <input 
+                                        type="radio" 
+                                        id="delivery-relay" 
+                                        name="delivery-mode" 
+                                        value="relay"
+                                        aria-required="true"
+                                    >
+                                    <label for="delivery-relay">
+                                        <span class="radio-label">Livraison en point relais</span>
+                                        <span class="radio-description">Retirez votre commande dans un point relais partenaire près de chez vous.</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="radio-option">
+                                    <input 
+                                        type="radio" 
+                                        id="delivery-pickup" 
+                                        name="delivery-mode" 
+                                        value="pickup"
+                                        aria-required="true"
+                                    >
+                                    <label for="delivery-pickup">
+                                        <span class="radio-label">Retrait à la ferme ou point de collecte</span>
+                                        <span class="radio-description">Récupérez vos paniers directement chez le producteur ou dans un point de collecte GreenCart.</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <span class="error-message" id="delivery-mode-error" role="alert" aria-live="polite"></span>
+                        </section>
+                        
+                        <!-- H2 – Créneau de livraison -->
+                        <section class="form-section">
+                            <h2>Créneau de livraison</h2>
+                            <p class="section-intro">Choisissez la date et le créneau horaires qui vous conviennent parmi ceux proposés pour votre adresse.</p>
+                            
+                            <div class="form-group">
+                                <label for="delivery-date">
+                                    Date de livraison souhaitée <span class="required" aria-label="requis">*</span>
+                                </label>
+                                <div class="date-options" role="radiogroup" aria-labelledby="delivery-date-label">
+                                    <span id="delivery-date-label" class="visually-hidden">Date de livraison souhaitée</span>
+                                    <button type="button" class="date-option" data-date="2025-11-27" aria-pressed="false">
+                                        <span class="date-day">Mercredi 27</span>
+                                        <span class="date-month">Novembre</span>
+                                    </button>
+                                    <button type="button" class="date-option" data-date="2025-11-28" aria-pressed="false">
+                                        <span class="date-day">Jeudi 28</span>
+                                        <span class="date-month">Novembre</span>
+                                    </button>
+                                    <button type="button" class="date-option" data-date="2025-11-29" aria-pressed="false">
+                                        <span class="date-day">Vendredi 29</span>
+                                        <span class="date-month">Novembre</span>
+                                    </button>
+                                </div>
+                                <input type="hidden" id="delivery-date" name="delivery-date" aria-required="true" aria-describedby="delivery-date-error">
+                                <span class="error-message" id="delivery-date-error" role="alert" aria-live="polite"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="delivery-time">
+                                    Créneau horaire <span class="required" aria-label="requis">*</span>
+                                </label>
+                                <div class="time-options" role="radiogroup" aria-labelledby="delivery-time-label">
+                                    <span id="delivery-time-label" class="visually-hidden">Créneau horaire</span>
+                                    <button type="button" class="time-option" data-time="08:00-10:00" aria-pressed="false">
+                                        08h00 – 10h00
+                                    </button>
+                                    <button type="button" class="time-option" data-time="10:00-12:00" aria-pressed="false">
+                                        10h00 – 12h00
+                                    </button>
+                                    <button type="button" class="time-option" data-time="18:00-20:00" aria-pressed="false">
+                                        18h00 – 20h00
+                                    </button>
+                                </div>
+                                <input type="hidden" id="delivery-time" name="delivery-time" aria-required="true" aria-describedby="delivery-time-error">
+                                <span class="error-message" id="delivery-time-error" role="alert" aria-live="polite"></span>
+                            </div>
+                        </section>
+                        
+                        <!-- H2 – Informations complémentaires -->
+                        <section class="form-section">
+                            <h2>Informations complémentaires</h2>
+                            
+                            <div class="form-group">
+                                <label for="delivery-notes">
+                                    Informations pour la livraison
+                                </label>
+                                <textarea 
+                                    id="delivery-notes" 
+                                    name="delivery-notes" 
+                                    rows="4"
+                                    placeholder="Interphone, digicode, étage, lieu précis de dépôt…"
+                                    aria-describedby="delivery-notes-help"
+                                ></textarea>
+                                <span class="field-help" id="delivery-notes-help">Ces informations seront communiquées au livreur pour faciliter la livraison.</span>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+                
+                <!-- Récapitulatif de la commande -->
+                <aside class="checkout-summary" role="complementary" aria-label="Récapitulatif de la commande">
+                    <div class="summary-card">
+                        <h2>Récapitulatif de la commande</h2>
+                        
+                        <div class="summary-details">
+                            <div class="summary-line">
+                                <span>Sous-total produits</span>
+                                <span>77,20 €</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Frais de livraison estimés</span>
+                                <span>4,90 €</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Contribution emballages réutilisables</span>
+                                <span>1,00 €</span>
+                            </div>
+                            
+                            <div class="summary-total">
+                                <span>Total estimé</span>
+                                <span>83,10 € TTC</span>
+                            </div>
+                            
+                            <p class="summary-note">Vous confirmerez ce total à l'étape suivante, après vérification de votre adresse et de votre mode de paiement.</p>
+                        </div>
+                        
+                        <div class="checkout-actions">
+                            <button type="submit" form="delivery-form" class="btn-primary checkout-cta">
+                                <span>Continuer vers le paiement</span>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </button>
+                            <a href="/panier" class="checkout-secondary-link">Retour au panier</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/cart-manager.js"></script>
+    <script src="/livraison.js"></script>
+</body>
+</html>
+

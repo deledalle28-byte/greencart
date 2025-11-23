@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta SEO -->
+    <title>Jus de pomme artisanal – Cueillette de la Vallée | GreenCart</title>
+    <meta name="description" content="Jus de pomme pressé sur place avec des pommes issues d'arbres non traités par la Cueillette de la Vallée. Produit local, artisanal et livraison neutre en carbone avec GreenCart.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Jus de pomme artisanal – Cueillette de la Vallée | GreenCart">
+    <meta property="og:description" content="Un jus pressé sur place avec des pommes issues d'arbres non traités.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Lien d'accessibilité : Aller au contenu principal -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Bloc 1 – Bandeau top -->
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <!-- Bloc 2 – Header / Navigation -->
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits" aria-current="page">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/compte" aria-label="Mon compte" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span class="visually-hidden">Mon compte</span>
+                    </a>
+                    <a href="/panier" aria-label="Panier, 0 article" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 2 14h12l4-14H5"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                        <span class="visually-hidden">Panier</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Bloc principal : Page produit -->
+    <main id="main-content" role="main">
+        <!-- Section principale : Galerie + Buy box -->
+        <section class="product-main" aria-labelledby="product-title">
+            <div class="container">
+                <div class="product-layout">
+                    <!-- Galerie produit (gauche) -->
+                    <div class="product-gallery">
+                        <div class="product-image-main">
+                            <img 
+                                src="/images/jus de pomme.jpg" 
+                                alt="Jus de pomme artisanal de la Cueillette de la Vallée"
+                                loading="eager"
+                                id="main-product-image"
+                            >
+                        </div>
+                        <div class="product-image-thumbnails">
+                            <button class="thumbnail-btn active" aria-label="Voir l'image principale" data-image="/images/jus de pomme.jpg">
+                                <img src="/images/jus de pomme.jpg" alt="Vue principale du jus" loading="lazy">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Buy box (droite) -->
+                    <div class="product-buy-box">
+                        <h1 id="product-title">Jus de pomme artisanal – Cueillette de la Vallée</h1>
+                        
+                        <p class="product-producer">
+                            par <a href="/producteur/cueillette-vallee" class="producer-link">Cueillette de la Vallée</a>
+                        </p>
+                        
+                        <div class="product-rating-summary" aria-label="Note : 4,4 sur 5">
+                            <span aria-hidden="true">★★★★☆</span>
+                            <span class="rating-text">4,4</span>
+                            <span class="rating-count">(52 avis)</span>
+                        </div>
+                        
+                        <div class="product-price-section">
+                            <div class="product-price">5,20 €</div>
+                            <p class="product-unit">Bouteille de 75cl</p>
+                        </div>
+                        
+                        <div class="product-status">
+                            <span class="status-badge status-in-stock">En stock</span>
+                            <span class="stock-info">Stock restant : 24 bouteilles</span>
+                            <span class="delivery-info">Prochaine livraison : mercredi</span>
+                        </div>
+                        
+                        <p class="delivery-method">Livraison neutre en carbone à domicile ou en point relais</p>
+                        
+                        <ul class="product-key-points">
+                            <li>Pressé sur place avec des pommes locales</li>
+                            <li>Pommes issues d'arbres non traités</li>
+                            <li>100% pur jus, sans sucre ajouté</li>
+                            <li>Production artisanale traditionnelle</li>
+                        </ul>
+                        
+                        <div class="product-quantity">
+                            <label for="quantity-selector">Quantité</label>
+                            <div class="quantity-controls">
+                                <button type="button" class="quantity-btn" aria-label="Diminuer la quantité" id="decrease-qty">-</button>
+                                <input 
+                                    type="number" 
+                                    id="quantity-selector" 
+                                    name="quantity" 
+                                    value="1" 
+                                    min="1" 
+                                    max="12"
+                                    aria-label="Quantité"
+                                >
+                                <button type="button" class="quantity-btn" aria-label="Augmenter la quantité" id="increase-qty">+</button>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn btn-primary btn-add-to-cart" id="add-to-cart-btn">
+                            Ajouter au panier
+                        </button>
+                        
+                        <a href="/producteur/cueillette-vallee" class="product-secondary-link">
+                            Voir tous les produits de la Cueillette de la Vallée
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bloc Description du produit -->
+        <section class="product-description-section" aria-labelledby="description-title">
+            <div class="container">
+                <h2 id="description-title">Description du produit</h2>
+                <div class="description-content">
+                    <p>Le jus de pomme de la Cueillette de la Vallée est pressé sur place avec des pommes issues de vergers locaux. Les pommes proviennent d'arbres non traités et sont pressées dans les jours qui suivent la récolte pour préserver toutes leurs saveurs.</p>
+                    <p>Ce jus 100% pur fruit est élaboré selon une méthode traditionnelle, sans pasteurisation excessive, ce qui lui confère un goût authentique et naturel. Il ne contient aucun sucre ajouté, conservateur ou colorant. Le jus est conditionné dans des bouteilles en verre consignables.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bloc Caractéristiques -->
+        <section class="product-specs-section" aria-labelledby="specs-title">
+            <div class="container">
+                <h2 id="specs-title">Caractéristiques</h2>
+                <dl class="specs-list">
+                    <dt>Origine</dt>
+                    <dd>Cueillette de la Vallée, La Vallée (moins de 15 km)</dd>
+                    
+                    <dt>Type de produit</dt>
+                    <dd>jus de pomme artisanal 100% pur fruit</dd>
+                    
+                    <dt>Contenu</dt>
+                    <dd>bouteille de 75cl</dd>
+                    
+                    <dt>Ingrédients</dt>
+                    <dd>100% jus de pomme (sans sucre ajouté, sans conservateur)</dd>
+                    
+                    <dt>Conservation</dt>
+                    <dd>à conserver au frais après ouverture, consommer dans les 5 jours</dd>
+                    
+                    <dt>Conditionnement</dt>
+                    <dd>bouteille en verre consignable</dd>
+                </dl>
+            </div>
+        </section>
+        
+        <!-- Bloc À propos du producteur -->
+        <section class="producer-section" aria-labelledby="producer-title">
+            <div class="container">
+                <h2 id="producer-title">À propos de la Cueillette de la Vallée</h2>
+                <h3>Un verger familial dédié aux pommes et aux fruits de saison</h3>
+                <div class="producer-content">
+                    <p>La Cueillette de la Vallée est un verger familial qui cultive des pommes et d'autres fruits de saison selon des méthodes respectueuses de l'environnement. Les arbres ne sont pas traités avec des produits chimiques de synthèse, et la récolte se fait à la main.</p>
+                    <p>Le pressage du jus se fait directement sur place, dans un petit atelier artisanal. Les pommes sont pressées fraîches, et le jus est conditionné dans des bouteilles en verre consignables pour limiter les déchets. La Cueillette de la Vallée propose également la cueillette libre de fruits en saison.</p>
+                    
+                    <dl class="producer-info">
+                        <dt>Localisation</dt>
+                        <dd>La Vallée</dd>
+                        
+                        <dt>Type d'exploitation</dt>
+                        <dd>verger et transformation de fruits</dd>
+                        
+                        <dt>Pratiques</dt>
+                        <dd>arbres non traités, pressage artisanal, conditionnement en verre consignable</dd>
+                        
+                        <dt>Autres produits</dt>
+                        <dd>cueillette libre de fruits, compotes, autres jus de fruits de saison</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bloc Avis clients -->
+        <section class="reviews-section" aria-labelledby="reviews-title">
+            <div class="container">
+                <h2 id="reviews-title">Avis clients</h2>
+                <div class="reviews-summary">
+                    <div class="reviews-rating" aria-label="Note moyenne : 4,4 sur 5">
+                        <span aria-hidden="true">★★★★☆</span>
+                        <span class="rating-text-large">4,4 / 5</span>
+                    </div>
+                    <p class="reviews-count">52 avis</p>
+                    <p class="reviews-note">Les avis sont vérifiés avant publication pour garantir des retours authentiques.</p>
+                </div>
+                
+                <div class="reviews-list">
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">Marie T.</div>
+                            <div class="review-rating" aria-label="Note : 5 sur 5">
+                                <span aria-hidden="true">★★★★★</span>
+                            </div>
+                            <div class="review-date">il y a 1 semaine</div>
+                        </div>
+                        <p class="review-text">"Un jus de pomme excellent ! On sent vraiment le goût des pommes fraîches, pas trop sucré. Les enfants adorent. La bouteille en verre est un plus."</p>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">François R.</div>
+                            <div class="review-rating" aria-label="Note : 4 sur 5">
+                                <span aria-hidden="true">★★★★☆</span>
+                            </div>
+                            <div class="review-date">il y a 3 semaines</div>
+                        </div>
+                        <p class="review-text">"Très bon jus, goût authentique. Le prix est raisonnable pour un produit artisanal de cette qualité. Je recommande."</p>
+                    </article>
+                </div>
+                
+                <div class="review-cta">
+                    <a href="/produit/jus-pomme/avis" class="btn btn-secondary">Laisser un avis sur ce produit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions-legales">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/cart-manager.js"></script>
+    <script src="/search.js"></script>
+    <script src="/script.js"></script>
+    <script src="/product.js"></script>
+</body>
+</html>
+

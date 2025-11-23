@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aide & FAQ – GreenCart</title>
+    <meta name="description" content="Questions sur votre commande, la livraison, le paiement ou votre compte GreenCart ? Retrouvez toutes les réponses dans notre centre d'aide et contactez notre équipe si besoin.">
+    
+    <link rel="canonical" href="https://greencart.fr/aide/" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Bloc 1 – Bandeau top -->
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <!-- Bloc 2 – Header / Navigation -->
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide" aria-current="page">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/compte" aria-label="Mon compte" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    <a href="/panier" aria-label="Panier" class="icon-link cart-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" aria-live="polite">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <h1>Aide & questions fréquentes</h1>
+            <p class="page-intro">Vous avez une question sur votre commande, la livraison, le paiement ou votre compte GreenCart ? Commencez ici : la plupart des réponses se trouvent dans notre centre d'aide.</p>
+
+            <section class="help-search-section">
+                <h2>Rechercher dans l'aide</h2>
+                <form class="help-search-form" role="search" aria-label="Rechercher dans l'aide">
+                    <input type="search" id="help-search" name="q" placeholder='Ex. : "modifier mon adresse de livraison", "délai de remboursement"' aria-label="Rechercher une question">
+                    <button type="submit" class="btn-primary">Rechercher</button>
+                </form>
+                <p class="help-search-hint">Tapez quelques mots-clés pour trouver rapidement une réponse.</p>
+            </section>
+
+            <section class="top-faq-section">
+                <h2>Questions les plus fréquentes</h2>
+                <div class="faq-accordion-list" id="top-faq">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-top-1">
+                            <span>Comment modifier mon créneau de livraison ?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-top-1" role="region" aria-labelledby="faq-top-1">
+                            <p>Tant que votre commande n'est pas en cours de préparation, vous pouvez demander une modification d'adresse ou de créneau via votre espace client. Si la commande est déjà en préparation, contactez-nous au plus vite : nous ferons le maximum, dans la limite des contraintes de livraison.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-top-2">
+                            <span>Comment suivre ma commande ?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-top-2" role="region" aria-labelledby="faq-top-2">
+                            <p>Une fois la commande validée, vous pouvez suivre son statut (préparation, prise en charge, livraison) depuis la rubrique "Mes commandes" de votre compte ou via le lien présent dans l'e-mail de confirmation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-top-3">
+                            <span>Quels moyens de paiement acceptez-vous ?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-top-3" role="region" aria-labelledby="faq-top-3">
+                            <p>Nous acceptons les principales cartes bancaires (CB, Visa, Mastercard). Selon votre appareil, vous pouvez également payer via Apple Pay, Google Pay ou un portefeuille en ligne partenaire.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-top-4">
+                            <span>Que faire si un produit est manquant ou abîmé ?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-top-4" role="region" aria-labelledby="faq-top-4">
+                            <p>Si un produit est manquant ou abîmé, contactez-nous dans les 24 heures suivant la livraison, avec une photo si possible. Nous trouverons une solution (remboursement partiel, avoir ou réexpédition selon le cas).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-top-5">
+                            <span>Comment retrouver ma facture ?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-top-5" role="region" aria-labelledby="faq-top-5">
+                            <p>Vous pouvez télécharger la facture de votre commande depuis l'e-mail de confirmation ou depuis votre espace client, rubrique "Mes commandes".</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="help-categories-section">
+                <h2>Parcourir par catégorie</h2>
+                <div class="help-categories-grid">
+                    <article class="help-category-card">
+                        <h3>Commandes & livraisons</h3>
+                        <div class="faq-accordion-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat1-1">
+                                    <span>Comment passer une commande sur GreenCart ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat1-1" role="region" aria-labelledby="faq-cat1-1">
+                                    <p>Pour passer une commande, ajoutez simplement les paniers et produits de votre choix à votre panier, puis cliquez sur "Passer à la livraison". Renseignez vos coordonnées, votre adresse, le mode et le créneau de livraison, puis validez le paiement sécurisé. Vous recevrez un e-mail de confirmation avec le récapitulatif complet.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat1-2">
+                                    <span>Quels sont les délais de livraison ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat1-2" role="region" aria-labelledby="faq-cat1-2">
+                                    <p>Les délais de livraison dépendent de votre code postal et des tournées prévues par nos producteurs et partenaires logistiques. Au moment du choix du créneau, nous vous proposons uniquement des dates réellement disponibles. L'information est rappelée dans votre e-mail de confirmation de commande.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat1-3">
+                                    <span>Puis-je modifier mon adresse ou mon créneau après commande ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat1-3" role="region" aria-labelledby="faq-cat1-3">
+                                    <p>Tant que votre commande n'est pas en cours de préparation, vous pouvez demander une modification d'adresse ou de créneau via votre espace client. Si la commande est déjà en préparation, contactez-nous au plus vite : nous ferons le maximum, dans la limite des contraintes de livraison.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat1-4">
+                                    <span>Comment suivre ma commande ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat1-4" role="region" aria-labelledby="faq-cat1-4">
+                                    <p>Une fois la commande validée, vous pouvez suivre son statut (préparation, prise en charge, livraison) depuis la rubrique "Mes commandes" de votre compte ou via le lien présent dans l'e-mail de confirmation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="help-category-card">
+                        <h3>Panier & compte client</h3>
+                        <div class="faq-accordion-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat2-1">
+                                    <span>Dois-je créer un compte pour commander ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat2-1" role="region" aria-labelledby="faq-cat2-1">
+                                    <p>Vous pouvez passer une première commande en tant qu'invité. À la fin de la commande, nous vous proposons de créer un compte en un clic à partir des informations saisies. Avoir un compte vous permet de suivre plus facilement vos commandes, d'enregistrer vos adresses et de retrouver vos factures.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat2-2">
+                                    <span>Comment voir l'historique de mes commandes ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat2-2" role="region" aria-labelledby="faq-cat2-2">
+                                    <p>Connectez-vous à votre compte, puis rendez-vous dans la rubrique "Mes commandes". Vous y trouverez la liste de vos commandes passées et en cours, avec le détail de chaque panier et les factures associées.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat2-3">
+                                    <span>Comment modifier les quantités dans mon panier ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat2-3" role="region" aria-labelledby="faq-cat2-3">
+                                    <p>Dans la page Panier, vous pouvez ajuster la quantité de chaque produit à l'aide des boutons +/− ou en saisissant directement le chiffre. Le total se met à jour automatiquement. Si une quantité n'est pas disponible, un message vous indiquera la quantité maximale possible.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat2-4">
+                                    <span>Comment supprimer un produit de mon panier ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat2-4" role="region" aria-labelledby="faq-cat2-4">
+                                    <p>Sur la ligne du produit concerné, cliquez sur "Supprimer". Le produit sera retiré du panier et le total sera recalculé.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="help-category-card">
+                        <h3>Paiement & facturation</h3>
+                        <div class="faq-accordion-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat3-1">
+                                    <span>Quels moyens de paiement acceptez-vous ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat3-1" role="region" aria-labelledby="faq-cat3-1">
+                                    <p>Nous acceptons les principales cartes bancaires (CB, Visa, Mastercard). Selon votre appareil, vous pouvez également payer via Apple Pay, Google Pay ou un portefeuille en ligne partenaire.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat3-2">
+                                    <span>Mon paiement est-il sécurisé ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat3-2" role="region" aria-labelledby="faq-cat3-2">
+                                    <p>Oui. Les paiements sont traités par un prestataire certifié PCI DSS, réputé pour la sécurisation des données de carte. Vos informations de carte sont chiffrées et transmises directement à ce prestataire : GreenCart n'y a jamais accès. Dans de nombreux cas, votre banque vous demandera une authentification forte (3D Secure) avant de valider le paiement.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat3-3">
+                                    <span>Où trouver ma facture ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat3-3" role="region" aria-labelledby="faq-cat3-3">
+                                    <p>Vous pouvez télécharger la facture de votre commande depuis l'e-mail de confirmation ou depuis votre espace client, rubrique "Mes commandes".</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat3-4">
+                                    <span>Que se passe-t-il si mon paiement est refusé ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat3-4" role="region" aria-labelledby="faq-cat3-4">
+                                    <p>Si le paiement est refusé par votre banque, aucun montant n'est débité. Vous pouvez vérifier les informations saisies, réessayer ou choisir un autre moyen de paiement. Si le problème persiste, rapprochez-vous de votre banque ou contactez-nous.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="help-category-card">
+                        <h3>Produits & producteurs</h3>
+                        <div class="faq-accordion-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat4-1">
+                                    <span>Comment sont sélectionnés les producteurs ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat4-1" role="region" aria-labelledby="faq-cat4-1">
+                                    <p>Nous travaillons avec des fermes et ateliers locaux qui partagent nos exigences de transparence, de qualité et de respect de l'environnement. Chaque producteur dispose d'une page dédiée où sont détaillées ses pratiques et ses produits disponibles sur GreenCart.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat4-2">
+                                    <span>Le contenu des paniers peut-il changer ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat4-2" role="region" aria-labelledby="faq-cat4-2">
+                                    <p>Oui, le contenu des paniers de saison peut varier d'une semaine à l'autre en fonction des récoltes. Nous affichons toujours la composition indicative, et vous êtes informé des éventuels ajustements avant la livraison.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat4-3">
+                                    <span>Comment connaître l'origine d'un produit ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat4-3" role="region" aria-labelledby="faq-cat4-3">
+                                    <p>Sur chaque fiche produit, la ferme ou l'atelier d'origine est indiqué clairement, avec la commune et la région. Nous mentionnons également les labels ou certifications lorsqu'ils sont pertinents et vérifiés.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat4-4">
+                                    <span>Que faire si un produit est manquant ou abîmé ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat4-4" role="region" aria-labelledby="faq-cat4-4">
+                                    <p>Si un produit est manquant ou abîmé, contactez-nous dans les 24 heures suivant la livraison, avec une photo si possible. Nous trouverons une solution (remboursement partiel, avoir ou réexpédition selon le cas).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="help-category-card">
+                        <h3>Problèmes techniques & accès au site</h3>
+                        <div class="faq-accordion-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat5-1">
+                                    <span>Je n'arrive pas à me connecter à mon compte. Que faire ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat5-1" role="region" aria-labelledby="faq-cat5-1">
+                                    <p>Vérifiez d'abord l'adresse e-mail utilisée. Si vous avez oublié votre mot de passe, utilisez le lien "Mot de passe oublié" sur la page de connexion. Si le problème persiste, contactez notre support avec le maximum de détails (message d'erreur, capture d'écran…).</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat5-2">
+                                    <span>Le site ne s'affiche pas correctement sur mon appareil.</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat5-2" role="region" aria-labelledby="faq-cat5-2">
+                                    <p>Essayez d'actualiser la page, de vider le cache de votre navigateur ou de tester un autre navigateur. Notre site est conçu pour être utilisable sur ordinateur, tablette et mobile. Si le problème continue, signalez-le-nous en précisant votre appareil et votre navigateur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="help-category-card">
+                        <h3>Accessibilité & données personnelles</h3>
+                        <div class="faq-accordion-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat6-1">
+                                    <span>Le site GreenCart est-il accessible aux personnes en situation de handicap ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat6-1" role="region" aria-labelledby="faq-cat6-1">
+                                    <p>Nous travaillons à rendre le site conforme aux recommandations WCAG 2.1 niveau AA : navigation clavier, contrastes suffisants, textes alternatifs pour les images importantes, structure de titres cohérente, etc. Si vous rencontrez une difficulté, n'hésitez pas à nous la signaler.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat6-2">
+                                    <span>Comment signaler un problème d'accessibilité ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat6-2" role="region" aria-labelledby="faq-cat6-2">
+                                    <p>Vous pouvez nous écrire via le formulaire de contact ou par e-mail en précisant la page concernée, le type de difficulté (lecture, navigation, formulaire…) et, si possible, l'outil utilisé (lecteur d'écran, clavier seul…). Cela nous aide à corriger plus vite.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false" aria-controls="faq-cat6-3">
+                                    <span>Comment sont utilisées mes données personnelles ?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-cat6-3" role="region" aria-labelledby="faq-cat6-3">
+                                    <p>Vos données servent uniquement à traiter vos commandes, assurer le suivi de livraison et, si vous l'avez accepté, vous envoyer des informations sur nos producteurs et nos nouveautés. Tous les détails sont précisés dans notre politique de confidentialité.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="help-contact-section">
+                <h2>Besoin d'aide supplémentaire ?</h2>
+                <p>Si vous ne trouvez pas la réponse à votre question dans l'aide, notre équipe est là pour vous aider.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method-card">
+                        <h3>E-mail</h3>
+                        <p><a href="mailto:support@greencart.fr">support@greencart.fr</a></p>
+                        <p class="contact-hint">Nous répondons généralement sous 24 heures ouvrées.</p>
+                    </div>
+                    
+                    <div class="contact-method-card">
+                        <h3>Formulaire de contact</h3>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-subject">Sujet *</label>
+                                <input type="text" id="contact-subject" name="subject" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Description *</label>
+                                <textarea id="contact-message" name="message" rows="5" required aria-required="true" placeholder="Décrivez votre question ou votre problème..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-attachment">Pièce jointe (optionnel)</label>
+                                <input type="file" id="contact-attachment" name="attachment" accept="image/*,.pdf">
+                            </div>
+                            <button type="submit" class="btn-primary">Envoyer une demande à l'équipe GreenCart</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="help-links">
+                    <a href="#main-content" class="btn-secondary">Voir toutes les catégories d'aide</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions-legales">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/cart-manager.js"></script>
+    <script src="/aide.js"></script>
+</body>
+</html>
+

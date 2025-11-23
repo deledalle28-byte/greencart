@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta SEO -->
+    <title>Coffret confitures artisanales – Atelier des Vergers | GreenCart</title>
+    <meta name="description" content="Coffret de 3 confitures artisanales préparées à partir de fruits locaux par l'Atelier des Vergers. Peu de sucre ajouté, produits locaux et livraison neutre en carbone avec GreenCart.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Coffret confitures artisanales – Atelier des Vergers | GreenCart">
+    <meta property="og:description" content="Trois recettes de saison préparées à partir de fruits locaux, peu de sucre ajouté.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Lien d'accessibilité : Aller au contenu principal -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Bloc 1 – Bandeau top -->
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <!-- Bloc 2 – Header / Navigation -->
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits" aria-current="page">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/compte" aria-label="Mon compte" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span class="visually-hidden">Mon compte</span>
+                    </a>
+                    <a href="/panier" aria-label="Panier, 0 article" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 2 14h12l4-14H5"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                        <span class="visually-hidden">Panier</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Bloc principal : Page produit -->
+    <main id="main-content" role="main">
+        <!-- Section principale : Galerie + Buy box -->
+        <section class="product-main" aria-labelledby="product-title">
+            <div class="container">
+                <div class="product-layout">
+                    <!-- Galerie produit (gauche) -->
+                    <div class="product-gallery">
+                        <div class="product-image-main">
+                            <img 
+                                src="/images/confiture.jpg" 
+                                alt="Coffret de confitures artisanales de l'Atelier des Vergers"
+                                loading="eager"
+                                id="main-product-image"
+                            >
+                        </div>
+                        <div class="product-image-thumbnails">
+                            <button class="thumbnail-btn active" aria-label="Voir l'image principale" data-image="/images/confiture.jpg">
+                                <img src="/images/confiture.jpg" alt="Vue principale du coffret" loading="lazy">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Buy box (droite) -->
+                    <div class="product-buy-box">
+                        <h1 id="product-title">Coffret confitures artisanales – Atelier des Vergers</h1>
+                        
+                        <p class="product-producer">
+                            par <a href="/producteur/atelier-vergers" class="producer-link">Atelier des Vergers</a>
+                        </p>
+                        
+                        <div class="product-rating-summary" aria-label="Note : 4,5 sur 5">
+                            <span aria-hidden="true">★★★★☆</span>
+                            <span class="rating-text">4,5</span>
+                            <span class="rating-count">(67 avis)</span>
+                        </div>
+                        
+                        <div class="product-price-section">
+                            <div class="product-price">14,90 €</div>
+                            <p class="product-unit">Coffret de 3 pots de 250g</p>
+                        </div>
+                        
+                        <div class="product-status">
+                            <span class="status-badge status-in-stock">En stock</span>
+                            <span class="stock-info">Stock restant : 15 coffrets</span>
+                            <span class="delivery-info">Prochaine livraison : mercredi</span>
+                        </div>
+                        
+                        <p class="delivery-method">Livraison neutre en carbone à domicile ou en point relais</p>
+                        
+                        <ul class="product-key-points">
+                            <li>3 recettes de saison différentes</li>
+                            <li>Fruits locaux et de saison</li>
+                            <li>Peu de sucre ajouté (60% de fruits minimum)</li>
+                            <li>Préparation artisanale traditionnelle</li>
+                        </ul>
+                        
+                        <div class="product-quantity">
+                            <label for="quantity-selector">Quantité</label>
+                            <div class="quantity-controls">
+                                <button type="button" class="quantity-btn" aria-label="Diminuer la quantité" id="decrease-qty">-</button>
+                                <input 
+                                    type="number" 
+                                    id="quantity-selector" 
+                                    name="quantity" 
+                                    value="1" 
+                                    min="1" 
+                                    max="10"
+                                    aria-label="Quantité"
+                                >
+                                <button type="button" class="quantity-btn" aria-label="Augmenter la quantité" id="increase-qty">+</button>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn btn-primary btn-add-to-cart" id="add-to-cart-btn">
+                            Ajouter au panier
+                        </button>
+                        
+                        <a href="/producteur/atelier-vergers" class="product-secondary-link">
+                            Voir tous les produits de l'Atelier des Vergers
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bloc Description du produit -->
+        <section class="product-description-section" aria-labelledby="description-title">
+            <div class="container">
+                <h2 id="description-title">Description du produit</h2>
+                <div class="description-content">
+                    <p>L'Atelier des Vergers vous propose un coffret de 3 confitures artisanales, préparées à partir de fruits locaux et de saison. Chaque pot de 250g contient une recette unique, élaborée selon les méthodes traditionnelles avec un minimum de 60% de fruits et peu de sucre ajouté.</p>
+                    <p>Les fruits proviennent de vergers locaux et sont transformés dans les jours qui suivent la récolte pour préserver leurs saveurs et leurs vitamines. Les recettes varient selon les saisons : fraises, abricots, figues, prunes, pommes... Chaque coffret est composé de 3 saveurs complémentaires.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bloc Caractéristiques -->
+        <section class="product-specs-section" aria-labelledby="specs-title">
+            <div class="container">
+                <h2 id="specs-title">Caractéristiques</h2>
+                <dl class="specs-list">
+                    <dt>Origine</dt>
+                    <dd>Atelier des Vergers, Les Vergers (moins de 20 km)</dd>
+                    
+                    <dt>Type de produit</dt>
+                    <dd>confitures artisanales</dd>
+                    
+                    <dt>Contenu</dt>
+                    <dd>coffret de 3 pots de 250g (saveurs variables selon saison)</dd>
+                    
+                    <dt>Teneur en fruits</dt>
+                    <dd>minimum 60% de fruits</dd>
+                    
+                    <dt>Conservation</dt>
+                    <dd>à conserver au frais après ouverture, consommer dans les 3 semaines</dd>
+                    
+                    <dt>Allergènes</dt>
+                    <dd>peut contenir des traces de fruits à coque selon les recettes</dd>
+                </dl>
+            </div>
+        </section>
+        
+        <!-- Bloc À propos du producteur -->
+        <section class="producer-section" aria-labelledby="producer-title">
+            <div class="container">
+                <h2 id="producer-title">À propos de l'Atelier des Vergers</h2>
+                <h3>Un atelier artisanal dédié aux fruits de saison</h3>
+                <div class="producer-content">
+                    <p>L'Atelier des Vergers est un petit atelier de transformation de fruits qui travaille en partenariat avec des producteurs locaux. Les fruits sont transformés dans les jours qui suivent la récolte, selon des méthodes traditionnelles qui préservent les saveurs naturelles.</p>
+                    <p>L'atelier privilégie les fruits de saison et locaux, et utilise peu de sucre pour laisser s'exprimer le goût authentique des fruits. Les confitures sont préparées en petites séries pour garantir la qualité et la fraîcheur de chaque pot.</p>
+                    
+                    <dl class="producer-info">
+                        <dt>Localisation</dt>
+                        <dd>Les Vergers</dd>
+                        
+                        <dt>Type d'activité</dt>
+                        <dd>transformation artisanale de fruits</dd>
+                        
+                        <dt>Pratiques</dt>
+                        <dd>fruits locaux, transformation à la main, recettes traditionnelles</dd>
+                        
+                        <dt>Autres produits</dt>
+                        <dd>confitures à la coupe, gelées, compotes</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bloc Avis clients -->
+        <section class="reviews-section" aria-labelledby="reviews-title">
+            <div class="container">
+                <h2 id="reviews-title">Avis clients</h2>
+                <div class="reviews-summary">
+                    <div class="reviews-rating" aria-label="Note moyenne : 4,5 sur 5">
+                        <span aria-hidden="true">★★★★☆</span>
+                        <span class="rating-text-large">4,5 / 5</span>
+                    </div>
+                    <p class="reviews-count">67 avis</p>
+                    <p class="reviews-note">Les avis sont vérifiés avant publication pour garantir des retours authentiques.</p>
+                </div>
+                
+                <div class="reviews-list">
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">Claire B.</div>
+                            <div class="review-rating" aria-label="Note : 5 sur 5">
+                                <span aria-hidden="true">★★★★★</span>
+                            </div>
+                            <div class="review-date">il y a 2 semaines</div>
+                        </div>
+                        <p class="review-text">"Des confitures délicieuses ! On sent vraiment le goût des fruits, pas trop sucrées. Parfait pour le petit-déjeuner. Le coffret fait un joli cadeau aussi."</p>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">Pierre L.</div>
+                            <div class="review-rating" aria-label="Note : 4 sur 5">
+                                <span aria-hidden="true">★★★★☆</span>
+                            </div>
+                            <div class="review-date">il y a 1 mois</div>
+                        </div>
+                        <p class="review-text">"Très bon rapport qualité-prix. Les confitures sont goûteuses et pas trop sucrées. J'aurais aimé pouvoir choisir les saveurs du coffret."</p>
+                    </article>
+                </div>
+                
+                <div class="review-cta">
+                    <a href="/produit/confitures/avis" class="btn btn-secondary">Laisser un avis sur ce produit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions-legales">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/cart-manager.js"></script>
+    <script src="/search.js"></script>
+    <script src="/script.js"></script>
+    <script src="/product.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta SEO -->
+    <title>Paiement sécurisé – GreenCart</title>
+    <meta name="description" content="Saisissez vos informations de paiement en toute sécurité pour finaliser votre commande de paniers et produits locaux sur GreenCart. Transactions sécurisées et authentification forte (3D Secure).">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://greencart.fr/commande/paiement/">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Lien d'accessibilité : Aller au contenu principal -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Bloc 1 – Bandeau top -->
+    <div class="top-banner" role="complementary" aria-label="Informations importantes">
+        <p>Livraison neutre en carbone dès 40 € d'achat • Satisfait ou remboursé sous 30 jours</p>
+    </div>
+    
+    <!-- Bloc 2 – Header / Navigation -->
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" aria-label="GreenCart - Retour à l'accueil">
+                    <img src="/images/Logo-removebg-preview 1.jpg" alt="GreenCart - Courses écoresponsables locales" class="logo-image">
+                    <h1 class="visually-hidden">GreenCart</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/producteurs">Producteurs & fermes</a></li>
+                    <li><a href="/produits">Paniers & produits</a></li>
+                    <li><a href="/engagements">Nos engagements</a></li>
+                    <li><a href="/aide">Aide & FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form" role="search" aria-label="Recherche de produits">
+                    <label for="search-input-payment" class="visually-hidden">Rechercher un produit ou un producteur</label>
+                    <input 
+                        type="search" 
+                        id="search-input-payment" 
+                        name="q" 
+                        placeholder="Rechercher un produit ou un producteur…"
+                        aria-label="Rechercher un produit ou un producteur"
+                    >
+                    <button type="submit" aria-label="Lancer la recherche">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div class="header-icons">
+                    <a href="/compte" aria-label="Mon compte" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span class="visually-hidden">Mon compte</span>
+                    </a>
+                    <a href="/panier" aria-label="Panier" class="icon-link">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 13 13"></path>
+                            <path d="M3 1h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z"></path>
+                        </svg>
+                        <span class="visually-hidden">Panier</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <div class="container checkout-container">
+            <!-- Fil d'Ariane -->
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <ol class="breadcrumb-list">
+                    <li><a href="/panier">Panier</a></li>
+                    <li><a href="/commande/livraison">Livraison & coordonnées</a></li>
+                    <li aria-current="page">Paiement</li>
+                    <li>Confirmation</li>
+                </ol>
+            </nav>
+            
+            <!-- Indicateur d'étapes -->
+            <div class="checkout-steps" role="progressbar" aria-valuenow="3" aria-valuemin="1" aria-valuemax="4" aria-label="Progression de la commande">
+                <p class="checkout-step-indicator">Étape 3 sur 4 – Paiement</p>
+            </div>
+            
+            <!-- H1 -->
+            <div class="checkout-header">
+                <h1>Paiement sécurisé</h1>
+            </div>
+            
+            <!-- Résumé d'erreur (caché par défaut) -->
+            <div class="error-summary" id="error-summary" role="alert" aria-live="polite" style="display: none;">
+                <h2 class="error-summary-title">Certains champs sont manquants ou incorrects</h2>
+                <p>Merci de vérifier les informations ci-dessous.</p>
+                <ul class="error-summary-list" id="error-summary-list"></ul>
+            </div>
+            
+            <!-- Message paiement en cours (caché par défaut) -->
+            <div class="payment-processing" id="payment-processing" style="display: none;" role="status" aria-live="polite">
+                <p>Ne fermez pas cette fenêtre pendant la validation de votre paiement…</p>
+            </div>
+            
+            <!-- Message erreur banque / SCA (caché par défaut) -->
+            <div class="payment-error-bank" id="payment-error-bank" style="display: none;" role="alert" aria-live="polite">
+                <h3>Le paiement n'a pas pu être validé par votre banque.</h3>
+                <p>Aucun montant n'a été débité. Vous pouvez vérifier vos informations ou réessayer avec un autre moyen de paiement.</p>
+            </div>
+            
+            <div class="checkout-layout">
+                <!-- Formulaire principal -->
+                <div class="checkout-form-wrapper">
+                    <form class="checkout-form" id="payment-form" novalidate>
+                        <!-- H2 – Choisissez votre moyen de paiement -->
+                        <section class="form-section">
+                            <h2>Choisissez votre moyen de paiement</h2>
+                            <p class="section-intro">Sélectionnez le moyen de paiement que vous souhaitez utiliser pour régler votre commande. Tous les paiements sont traités de manière sécurisée par notre prestataire de paiement.</p>
+                            
+                            <fieldset class="radio-group" aria-describedby="payment-method-error">
+                                <legend class="visually-hidden">Moyen de paiement</legend>
+                                
+                                <div class="radio-option">
+                                    <input 
+                                        type="radio" 
+                                        id="payment-card" 
+                                        name="payment-method" 
+                                        value="card"
+                                        aria-required="true"
+                                        checked
+                                    >
+                                    <label for="payment-card">
+                                        <span class="radio-label">Carte bancaire (CB, Visa, Mastercard)</span>
+                                        <span class="radio-description">La plupart des commandes nécessitent une authentification forte (3D Secure) via votre banque.</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="radio-option">
+                                    <input 
+                                        type="radio" 
+                                        id="payment-wallet" 
+                                        name="payment-method" 
+                                        value="wallet"
+                                        aria-required="true"
+                                    >
+                                    <label for="payment-wallet">
+                                        <span class="radio-label">Portefeuille (Apple Pay / Google Pay)</span>
+                                        <span class="radio-description">Payez en un geste avec votre portefeuille enregistré sur votre appareil.</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="radio-option">
+                                    <input 
+                                        type="radio" 
+                                        id="payment-paypal" 
+                                        name="payment-method" 
+                                        value="paypal"
+                                        aria-required="true"
+                                    >
+                                    <label for="payment-paypal">
+                                        <span class="radio-label">PayPal</span>
+                                        <span class="radio-description">Vous serez redirigé vers PayPal pour valider votre paiement.</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <span class="error-message" id="payment-method-error" role="alert" aria-live="polite"></span>
+                        </section>
+                        
+                        <!-- H2 – Détails du paiement (carte bancaire) -->
+                        <section class="form-section" id="card-details-section">
+                            <h2>Détails du paiement</h2>
+                            <p class="section-intro">Vos informations de carte bancaire sont chiffrées et transmises directement à notre prestataire de paiement certifié PCI DSS. GreenCart n'a jamais accès au numéro complet de votre carte.</p>
+                            
+                            <div class="form-group">
+                                <label for="card-number">
+                                    Numéro de carte <span class="required" aria-label="requis">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="card-number" 
+                                    name="card-number" 
+                                    placeholder="1234 5678 9012 3456"
+                                    autocomplete="cc-number"
+                                    aria-required="true"
+                                    aria-describedby="card-number-info card-number-error"
+                                    maxlength="19"
+                                >
+                                <span class="field-help" id="card-number-info">CB, Visa, Mastercard</span>
+                                <span class="error-message" id="card-number-error" role="alert" aria-live="polite"></span>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-expiry">
+                                        Date d'expiration <span class="required" aria-label="requis">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="card-expiry" 
+                                        name="card-expiry" 
+                                        placeholder="MM / AA"
+                                        autocomplete="cc-exp"
+                                        aria-required="true"
+                                        aria-describedby="card-expiry-error"
+                                        maxlength="5"
+                                    >
+                                    <span class="error-message" id="card-expiry-error" role="alert" aria-live="polite"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="card-cvc">
+                                        Cryptogramme (CVC) <span class="required" aria-label="requis">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="card-cvc" 
+                                        name="card-cvc" 
+                                        placeholder="123"
+                                        autocomplete="cc-csc"
+                                        aria-required="true"
+                                        aria-describedby="card-cvc-help card-cvc-error"
+                                        maxlength="4"
+                                    >
+                                    <span class="field-help" id="card-cvc-help">Les 3 chiffres au dos de votre carte.</span>
+                                    <span class="error-message" id="card-cvc-error" role="alert" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="card-name">
+                                    Nom figurant sur la carte <span class="required" aria-label="requis">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="card-name" 
+                                    name="card-name" 
+                                    placeholder="Ex. : Camille Dupont"
+                                    autocomplete="cc-name"
+                                    aria-required="true"
+                                    aria-describedby="card-name-error"
+                                >
+                                <span class="error-message" id="card-name-error" role="alert" aria-live="polite"></span>
+                            </div>
+                        </section>
+                        
+                        <!-- Bloc pour wallet / PayPal -->
+                        <section class="form-section" id="wallet-section" style="display: none;">
+                            <div class="payment-redirect-info">
+                                <p>Vous serez redirigé vers <span id="wallet-name"></span> pour finaliser votre paiement en toute sécurité.</p>
+                            </div>
+                        </section>
+                        
+                        <!-- H2 – Adresse de facturation -->
+                        <section class="form-section">
+                            <h2>Adresse de facturation</h2>
+                            <p class="section-intro">Par défaut, votre adresse de facturation est la même que votre adresse de livraison. Vous pouvez la modifier si nécessaire.</p>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input 
+                                        type="checkbox" 
+                                        id="billing-same" 
+                                        name="billing-same" 
+                                        checked
+                                        aria-describedby="billing-same-help"
+                                    >
+                                    <span>Utiliser mon adresse de livraison comme adresse de facturation</span>
+                                </label>
+                                <span class="field-help" id="billing-same-help"></span>
+                            </div>
+                            
+                            <div id="billing-address-fields" style="display: none;">
+                                <div class="form-group">
+                                    <label for="billing-address">
+                                        Adresse de facturation <span class="required" aria-label="requis">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="billing-address" 
+                                        name="billing-address" 
+                                        placeholder="Numéro et nom de rue"
+                                        autocomplete="billing street-address"
+                                        aria-required="true"
+                                        aria-describedby="billing-address-error"
+                                    >
+                                    <span class="error-message" id="billing-address-error" role="alert" aria-live="polite"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="billing-address-complement">
+                                        Complément d'adresse
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="billing-address-complement" 
+                                        name="billing-address-complement" 
+                                        placeholder="Bâtiment, étage, résidence…"
+                                        autocomplete="billing address-line2"
+                                    >
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="billing-postal-code">
+                                            Code postal <span class="required" aria-label="requis">*</span>
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="billing-postal-code" 
+                                            name="billing-postal-code" 
+                                            placeholder="Ex. : 75011"
+                                            autocomplete="billing postal-code"
+                                            aria-required="true"
+                                            aria-describedby="billing-postal-code-error"
+                                        >
+                                        <span class="error-message" id="billing-postal-code-error" role="alert" aria-live="polite"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="billing-city">
+                                            Ville <span class="required" aria-label="requis">*</span>
+                                        </label>
+                                        <input 
+                                            type="text" 
+                                            id="billing-city" 
+                                            name="billing-city" 
+                                            placeholder="Ex. : Paris"
+                                            autocomplete="billing address-level2"
+                                            aria-required="true"
+                                            aria-describedby="billing-city-error"
+                                        >
+                                        <span class="error-message" id="billing-city-error" role="alert" aria-live="polite"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="billing-country">
+                                        Pays <span class="required" aria-label="requis">*</span>
+                                    </label>
+                                    <select 
+                                        id="billing-country" 
+                                        name="billing-country" 
+                                        autocomplete="billing country"
+                                        aria-required="true"
+                                        aria-describedby="billing-country-error"
+                                    >
+                                        <option value="FR" selected>France</option>
+                                        <option value="BE">Belgique</option>
+                                        <option value="CH">Suisse</option>
+                                    </select>
+                                    <span class="error-message" id="billing-country-error" role="alert" aria-live="polite"></span>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- H2 – Sécurité du paiement -->
+                        <section class="form-section security-section">
+                            <h2>Sécurité du paiement</h2>
+                            
+                            <div class="security-content">
+                                <p><strong>PCI DSS & prestataire de paiement</strong></p>
+                                <p>Les paiements GreenCart sont traités par un prestataire de paiement certifié PCI DSS, qui respecte les standards internationaux de sécurité des données de carte bancaire. Vos informations de carte sont chiffrées et transmises directement à ce prestataire : GreenCart n'a jamais accès au numéro complet de votre carte.</p>
+                                
+                                <p><strong>Authentification forte (3D Secure / PSD2)</strong></p>
+                                <p>Pour la plupart des commandes, une étape d'authentification forte (SCA) peut être demandée par votre banque (ex. code reçu par SMS, validation dans l'application bancaire, etc.). Cette étape supplémentaire, imposée par la directive européenne PSD2, permet de réduire la fraude et de sécuriser vos paiements en ligne.</p>
+                                
+                                <p><strong>Données personnelles</strong></p>
+                                <p>Vos données personnelles sont utilisées uniquement pour traiter votre commande et assurer le suivi de livraison. Vous pouvez retrouver tous les détails dans notre <a href="/confidentialite">politique de confidentialité</a>.</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Boutons -->
+                        <div class="checkout-actions">
+                            <button type="submit" class="btn-primary checkout-cta">
+                                <span>Payer maintenant</span>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </button>
+                            <a href="/commande/livraison" class="checkout-secondary-link">Retour à l'étape livraison</a>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Récapitulatif de la commande -->
+                <aside class="checkout-summary" role="complementary" aria-label="Récapitulatif de la commande">
+                    <div class="summary-card">
+                        <h2>Récapitulatif de la commande</h2>
+                        
+                        <div class="summary-details">
+                            <div class="summary-line">
+                                <span>Sous-total produits</span>
+                                <span>77,20 €</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Livraison</span>
+                                <span>4,90 €</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Contribution emballages réutilisables</span>
+                                <span>1,00 €</span>
+                            </div>
+                            
+                            <div class="summary-total">
+                                <span>Total à payer</span>
+                                <span>83,10 € TTC</span>
+                            </div>
+                            
+                            <p class="summary-note">Aucun montant ne sera débité tant que vous n'avez pas confirmé le paiement sur cette page, puis validé l'éventuelle authentification demandée par votre banque (3D Secure).</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GreenCart</h3>
+                    <ul>
+                        <li><a href="/a-propos">À propos</a></li>
+                        <li><a href="/engagements">Nos engagements</a></li>
+                        <li><a href="/rejoindre">Rejoindre nos producteurs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="/aide">Aide & FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/suivi">Suivi de commande</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Infos légales</h3>
+                    <ul>
+                        <li><a href="/mentions">Mentions légales</a></li>
+                        <li><a href="/cgv">Conditions générales de vente</a></li>
+                        <li><a href="/confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="/accessibilite">Accessibilité du site</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 GreenCart – Courses écoresponsables locales</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/cart-manager.js"></script>
+    <script src="/paiement.js"></script>
+</body>
+</html>
+
